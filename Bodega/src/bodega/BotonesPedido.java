@@ -24,7 +24,7 @@ public class BotonesPedido{
         verduras.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                base.seleccionarCategoria(0);
+                base.setCategoria(0);
                 base.repaint();
             }
         });
@@ -39,7 +39,7 @@ public class BotonesPedido{
         frutas.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                base.seleccionarCategoria(1);
+                base.setCategoria(1);
                 base.repaint();
             }
         });
@@ -54,7 +54,7 @@ public class BotonesPedido{
         carnes.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                base.seleccionarCategoria(2);
+                base.setCategoria(2);
                 base.repaint();
             }
         });
@@ -84,17 +84,117 @@ public class BotonesPedido{
     }
     
     private void cantidadProducto(){
-        JButton mas = new JButton();
-        mas.setBounds(850, 100, 25, 25);
-        mas.setBorderPainted(true);
-        mas.setBackground(Color.black);
+        JButton mas0 = new JButton();
+        mas0.setBounds(850, 100, 25, 25);
+        mas0.setBorderPainted(true);
+        mas0.setBackground(Color.black);
         
-        JButton menos = new JButton();
-        menos.setBounds(750, 100, 25, 25);
-        menos.setBorderPainted(true);
-        menos.setBackground(Color.red);
+        mas0.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sumarProducto(0);
+                base.repaint();
+            }
+        });
+        
+        JButton menos0 = new JButton();
+        menos0.setBounds(750, 100, 25, 25);
+        menos0.setBorderPainted(true);
+        menos0.setBackground(Color.red);
+        
+        menos0.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restarProducto(0);
+                base.repaint();
+            }
+        });
+        
+        JButton mas1 = new JButton();
+        mas1.setBounds(850, 200, 25, 25);
+        mas1.setBorderPainted(true);
+        mas1.setBackground(Color.black);
+        
+        mas1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sumarProducto(1);
+                base.repaint();
+            }
+        });
+        
+        JButton menos1 = new JButton();
+        menos1.setBounds(750, 200, 25, 25);
+        menos1.setBorderPainted(true);
+        menos1.setBackground(Color.red);
+        
+        menos1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restarProducto(1);
+                base.repaint();
+            }
+        });
+        
+        JButton mas2 = new JButton();
+        mas2.setBounds(850, 300, 25, 25);
+        mas2.setBorderPainted(true);
+        mas2.setBackground(Color.black);
+        
+        mas2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sumarProducto(2);
+                base.repaint();
+            }
+        });
 
-        base.add(mas);
-        base.add(menos);
+        JButton menos2 = new JButton();
+        menos2.setBounds(750, 300, 25, 25);
+        menos2.setBorderPainted(true);
+        menos2.setBackground(Color.red);
+        
+        menos2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restarProducto(2);
+                base.repaint();
+            }
+        });
+
+        base.add(mas0);
+        base.add(menos0);
+        base.add(mas1);
+        base.add(menos1);
+        base.add(mas2);
+        base.add(menos2);
+    }
+    
+    private void sumarProducto(int numBoton){
+        switch(base.getCategoria()){
+            case 0:
+                base.getResumenPedido().sumarFrutas(numBoton);
+                break;
+            case 1:
+                base.getResumenPedido().sumarVerduras(numBoton);
+                break;
+            case 2:
+                base.getResumenPedido().sumarCarnes(numBoton);
+                break;
+        }     
+    }
+    
+    private void restarProducto(int numBoton) {
+        switch (base.getCategoria()) {
+            case 0:
+                base.getResumenPedido().restarFrutas(numBoton);
+                break;
+            case 1:
+                base.getResumenPedido().restarVerduras(numBoton);
+                break;
+            case 2:
+                base.getResumenPedido().restarCarnes(numBoton);
+                break;
+        }
     }
 }
