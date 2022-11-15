@@ -30,14 +30,12 @@ public class MenuPrincipal extends JPanel{
         inicio.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                window.setComponentZOrder(window.getMenu(), 3);
-                window.setComponentZOrder(window.getSelector(), 0);
-                window.setComponentZOrder(window.getResumen(), 1);
-                window.setComponentZOrder(window.getBase(), 2);
+                window.setComponentZOrder(window.getMenu(), 2);
+                window.setComponentZOrder(window.getResumen(), 0);
+                window.setComponentZOrder(window.getBase(), 1);
                 
                 window.getMenu().setVisible(false);
                 
-                window.getSelector().setVisible(true);
                 window.getResumen().setVisible(true);
                 window.getBase().setVisible(true);
                 
