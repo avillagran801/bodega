@@ -26,5 +26,9 @@ public class VentanaPedido extends JFrame {
         this.getContentPane().add(selCat);
         this.getContentPane().add(res);
         this.getContentPane().add(base);
+        
+        this.setComponentZOrder(selCat, 0);
+        this.setComponentZOrder(res, 1);
+        this.setComponentZOrder(base, 2);
     }
 }
