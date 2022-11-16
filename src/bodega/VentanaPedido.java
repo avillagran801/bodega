@@ -1,5 +1,6 @@
 package bodega;
 import java.awt.*;
+import java.io.IOException;
 import javax.swing.*;
 
 
@@ -8,7 +9,7 @@ public class VentanaPedido extends JFrame {
     private BasePedidos base;
     private MenuPrincipal principal;
 
-    public VentanaPedido() {
+    public VentanaPedido() throws IOException {
         super();
         this.setLayout(new BorderLayout());
         this.setTitle("Ventana Pedido");

@@ -2,12 +2,13 @@ package bodega;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class BasePedidos extends JPanel{
     private int categoria;
     private ListaPedido lista;
     
-    public BasePedidos(int anchoVentana, int largoVentana){
+    public BasePedidos(int anchoVentana, int largoVentana) throws IOException{
         this.setLayout(null);
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
@@ -42,50 +43,26 @@ public class BasePedidos extends JPanel{
                 g.setColor(azulClaro);
                 g.fillRect(0, 100, 150, 60);
                 
-                // Ítems y cantidad de cada uno
-                g.setColor(Color.white);
-                
-                g.setFont(letraMediana);
-                g.drawString("Manzana", 250, 118);
-                g.drawString("Naranja", 250, 218);
-                g.drawString("Plátano",250, 318);
-                
-                g.setFont(letraPequena);
-                g.drawString(""+ lista.getManzana().getCantidad(), 810, 118);
-                g.drawString(""+ lista.getNaranja().getCantidad(), 810, 218);
-                g.drawString(""+ lista.getPlatano().getCantidad(), 810, 318);
+                // Pinta imágenes de los ítems y la cantidad de cada uno                
+                lista.getManzana().paintComponent(g, 100, 118, 118);
+                lista.getNaranja().paintComponent(g, 100, 318, 218);
+                lista.getPlatano().paintComponent(g, 100, 518, 318);
                 break;
             case 1:
                 g.setColor(azulClaro);
                 g.fillRect(0, 180, 150, 60);
                 
-                g.setColor(Color.white);
-                
-                g.setFont(letraMediana);
-                g.drawString("Lechuga", 250, 118);
-                g.drawString("Tomate", 250, 218);
-                g.drawString("Pepino", 250, 318);
-                
-                g.setFont(letraPequena);
-                g.drawString(""+ lista.getLechuga().getCantidad(), 810, 118);
-                g.drawString(""+ lista.getTomate().getCantidad(), 810, 218);
-                g.drawString(""+ lista.getPepino().getCantidad(), 810, 318);
+                lista.getLechuga().paintComponent(g, 100, 118, 118);
+                lista.getTomate().paintComponent(g, 100, 218, 218);
+                lista.getPepino().paintComponent(g, 100, 218, 318);
                 break;
             case 2:
                 g.setColor(azulClaro);
                 g.fillRect(0, 260, 150, 60);
                 
-                g.setColor(Color.white);
-                
-                g.setFont(letraMediana);
-                g.drawString("Pollo", 250, 118);
-                g.drawString("Hamburguesa", 250, 218);
-                g.drawString("Churrasco", 250, 318);
-                
-                g.setFont(letraPequena);
-                g.drawString("" + lista.getPollo().getCantidad(), 810, 118);
-                g.drawString("" + lista.getHamburguesa().getCantidad(), 810, 218);
-                g.drawString("" + lista.getChurrasco().getCantidad(), 810, 318);
+                lista.getPollo().paintComponent(g, 100, 118, 118);
+                lista.getHamburguesa().paintComponent(g, 100, 218, 218);
+                lista.getChurrasco().paintComponent(g, 100, 318, 318);
                 break;
         }
         

@@ -2,6 +2,7 @@ package bodega;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ListaPedido{
@@ -15,16 +16,16 @@ public class ListaPedido{
     private Item hamburguesa;
     private Item churrasco;
     
-    public ListaPedido() {
-        manzana = new Item();
-        naranja = new Item();
-        platano = new Item();
-        lechuga = new Item();
-        tomate = new Item();
-        pepino = new Item();
-        pollo = new Item();
-        hamburguesa = new Item();
-        churrasco = new Item();
+    public ListaPedido() throws IOException {
+        manzana = new Item("Manzana");
+        naranja = new Item("Naranja");
+        platano = new Item("Plátano");
+        lechuga = new Item("Lechuga");
+        tomate = new Item("Tomate");
+        pepino = new Item("Pepino");
+        pollo = new Item("Pollo");
+        hamburguesa = new Item("Hamburguesa");
+        churrasco = new Item("Churrasco");
     }
     
     public Item getManzana(){
