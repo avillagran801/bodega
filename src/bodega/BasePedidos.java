@@ -44,25 +44,25 @@ public class BasePedidos extends JPanel{
                 g.fillRect(0, 100, 150, 60);
                 
                 // Pinta imágenes de los ítems y la cantidad de cada uno                
-                lista.getManzana().paintComponent(g, 100, 118, 118);
-                lista.getNaranja().paintComponent(g, 100, 318, 218);
-                lista.getPlatano().paintComponent(g, 100, 518, 318);
+                lista.getManzana().paintComponent(g, 100, 140);
+                lista.getNaranja().paintComponent(g, 300, 340);
+                lista.getPlatano().paintComponent(g, 500, 540);
                 break;
             case 1:
                 g.setColor(azulClaro);
                 g.fillRect(0, 180, 150, 60);
                 
-                lista.getLechuga().paintComponent(g, 100, 118, 118);
-                lista.getTomate().paintComponent(g, 100, 218, 218);
-                lista.getPepino().paintComponent(g, 100, 218, 318);
+                lista.getLechuga().paintComponent(g, 100, 140);
+                lista.getTomate().paintComponent(g, 300, 340);
+                lista.getPepino().paintComponent(g, 500, 540);
                 break;
             case 2:
                 g.setColor(azulClaro);
                 g.fillRect(0, 260, 150, 60);
                 
-                lista.getPollo().paintComponent(g, 100, 118, 118);
-                lista.getHamburguesa().paintComponent(g, 100, 218, 218);
-                lista.getChurrasco().paintComponent(g, 100, 318, 318);
+                lista.getPollo().paintComponent(g, 100, 140);
+                lista.getHamburguesa().paintComponent(g, 300, 340);
+                lista.getChurrasco().paintComponent(g, 500, 540);
                 break;
         }
         

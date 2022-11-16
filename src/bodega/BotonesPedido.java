@@ -88,7 +88,7 @@ public class BotonesPedido{
         Color verde = new Color(52, 78, 65);
         
         JButton mas0 = new JButton();
-        mas0.setBounds(850, 100, 25, 25);
+        mas0.setBounds(850, 140, 25, 25);
         mas0.setBorderPainted(false);
         mas0.setBackground(verde);
         
@@ -101,7 +101,7 @@ public class BotonesPedido{
         });
         
         JButton menos0 = new JButton();
-        menos0.setBounds(750, 100, 25, 25);
+        menos0.setBounds(750, 140, 25, 25);
         menos0.setBorderPainted(false);
         menos0.setBackground(rojoOscuro);
         
@@ -114,7 +114,7 @@ public class BotonesPedido{
         });
         
         JButton mas1 = new JButton();
-        mas1.setBounds(850, 200, 25, 25);
+        mas1.setBounds(850, 340, 25, 25);
         mas1.setBorderPainted(false);
         mas1.setBackground(verde);
         
@@ -127,7 +127,7 @@ public class BotonesPedido{
         });
         
         JButton menos1 = new JButton();
-        menos1.setBounds(750, 200, 25, 25);
+        menos1.setBounds(750, 340, 25, 25);
         menos1.setBorderPainted(false);
         menos1.setBackground(rojoOscuro);
         
@@ -140,7 +140,7 @@ public class BotonesPedido{
         });
         
         JButton mas2 = new JButton();
-        mas2.setBounds(850, 300, 25, 25);
+        mas2.setBounds(850, 540, 25, 25);
         mas2.setBorderPainted(false);
         mas2.setBackground(verde);
         
@@ -153,7 +153,7 @@ public class BotonesPedido{
         });
 
         JButton menos2 = new JButton();
-        menos2.setBounds(750, 300, 25, 25);
+        menos2.setBounds(750, 540, 25, 25);
         menos2.setBorderPainted(false);
         menos2.setBackground(rojoOscuro);
         

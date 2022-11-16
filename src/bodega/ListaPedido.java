@@ -17,15 +17,15 @@ public class ListaPedido{
     private Item churrasco;
     
     public ListaPedido() throws IOException {
-        manzana = new Item("Manzana");
-        naranja = new Item("Naranja");
-        platano = new Item("Plátano");
-        lechuga = new Item("Lechuga");
-        tomate = new Item("Tomate");
-        pepino = new Item("Pepino");
-        pollo = new Item("Pollo");
-        hamburguesa = new Item("Hamburguesa");
-        churrasco = new Item("Churrasco");
+        manzana = new Item("Manzana", "(1 kilo)", "/res/manzana.png");
+        naranja = new Item("Naranja", "(1 kilo)", "/res/naranja.png");
+        platano = new Item("Plátano", "(1 kilo)", "/res/platano.png");
+        lechuga = new Item("Lechuga", "(1 unidad)", "/res/lechuga.png");
+        tomate = new Item("Tomate", "(1 kilo)", "/res/tomate.png");
+        pepino = new Item("Pepino", "(1 unidad)", "/res/pepino.png");
+        pollo = new Item("Pollo", "(1 kilo)", "/res/pollo.png");
+        hamburguesa = new Item("Hamburguesa", "(1 unidad)", "/res/hamburguesa.png");
+        churrasco = new Item("Churrasco", "(1 unidad)", "/res/churrasco.png");
     }
     
     public Item getManzana(){
