@@ -4,7 +4,7 @@ import javax.swing.*;
 
 
 public class VentanaPedido extends JFrame {
-    private ResumenPedido res;
+    private ListaPedido res;
     private BasePedidos base;
     private MenuPrincipal principal;
 
@@ -19,7 +19,7 @@ public class VentanaPedido extends JFrame {
         this.setResizable(false);
         this.setVisible(true);
         
-        res = new ResumenPedido();
+        res = new ListaPedido();
         base = new BasePedidos(this.getWidth(), this.getHeight());
         principal = new MenuPrincipal(this.getWidth(), this.getHeight());
         
@@ -43,7 +43,7 @@ public class VentanaPedido extends JFrame {
         return principal;
     }
     
-    public ResumenPedido getResumen(){
+    public ListaPedido getResumen(){
         return res;
     }
     
