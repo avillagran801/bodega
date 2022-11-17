@@ -14,14 +14,14 @@ public class BotonesPedido{
     }
     
     private void selectorCategoria(){       
-        JButton verduras = new JButton("Verduras");
-        verduras.setBounds(20, 100, 130, 60);
-        verduras.setBorderPainted(false);
-        verduras.setContentAreaFilled(false);
-        verduras.setForeground(Color.white);        
-        verduras.setFont(new Font("SansSerif.", 1, 16));
-
-        verduras.addMouseListener(new java.awt.event.MouseAdapter() {
+        JButton frutas = new JButton("Frutas");
+        frutas.setBounds(20, 100, 130, 60);
+        frutas.setBorderPainted(false);
+        frutas.setContentAreaFilled(false);
+        frutas.setForeground(Color.white);
+        frutas.setFont(new Font("SansSerif.", 1, 16));
+        
+        frutas.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 base.setCategoria(0);
@@ -29,14 +29,14 @@ public class BotonesPedido{
             }
         });
         
-        JButton frutas = new JButton("Frutas");
-        frutas.setBounds(20, 180, 130, 60);
-        frutas.setBorderPainted(false);
-        frutas.setContentAreaFilled(false);
-        frutas.setForeground(Color.white);
-        frutas.setFont(new Font("SansSerif.", 1, 16));
-        
-        frutas.addMouseListener(new java.awt.event.MouseAdapter() {
+        JButton verduras = new JButton("Verduras");
+        verduras.setBounds(20, 180, 130, 60);
+        verduras.setBorderPainted(false);
+        verduras.setContentAreaFilled(false);
+        verduras.setForeground(Color.white);        
+        verduras.setFont(new Font("SansSerif.", 1, 16));
+
+        verduras.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 base.setCategoria(1);
