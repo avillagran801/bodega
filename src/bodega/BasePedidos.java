@@ -7,14 +7,22 @@ import java.io.IOException;
 public class BasePedidos extends JPanel{
     private int categoria;
     private ListaPedido lista;
+    private Ventana window;
     
     public BasePedidos(int anchoVentana, int largoVentana) throws IOException{
         this.setLayout(null);
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
         BotonesPedido botones = new BotonesPedido(this);
-        lista = new ListaPedido();
-        
+        lista = new ListaPedido(); 
+    }
+    
+    public void setWindow(Ventana window_aux) {
+        window = window_aux;
+    }
+    
+    public Ventana getWindow(){
+        return window;
     }
 
     @Override
@@ -33,9 +41,7 @@ public class BasePedidos extends JPanel{
         g.fillRect(this.getWidth()-250, 0, 250, this.getHeight());
       
         // Ítems y su cantidad
-        Font letraMediana = new Font("SansSerif.", 1, 16);
-        Font letraPequena = new Font("SansSerif.", 1, 12);
-        
+        Font letraMediana = new Font("SansSerif.", 1, 16);        
         
         switch(categoria){
             case 0:
@@ -68,7 +74,7 @@ public class BasePedidos extends JPanel{
         
         g.setColor(Color.white);
         g.setFont(letraMediana);
-        g.drawString("Resumen Pedido", 1000, 50);
+        g.drawString("Resumen Pedido", 1000, 100);
         resumenPedido(g);
 
     }

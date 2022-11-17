@@ -76,7 +76,15 @@ public class BotonesPedido{
         finPedido.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                System.out.println("Pedido finalizado");
+                base.getWindow().setComponentZOrder(base.getWindow().getMenu(), 1);
+                base.getWindow().setComponentZOrder(base, 2);
+                base.getWindow().setComponentZOrder(base.getWindow().getVista(), 0);
+                
+                base.getWindow().getMenu().setVisible(false);
+                base.setVisible(false);
+                base.getWindow().getVista().setVisible(true);
+                
+                base.repaint();
             }
         });
 

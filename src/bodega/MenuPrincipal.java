@@ -4,17 +4,23 @@ import javax.swing.*;
 
 public class MenuPrincipal extends JPanel{
     
-    private VentanaPedido window;
+    private Ventana window;
     
     public MenuPrincipal (int anchoVentana, int largoVentana) {
         this.setLayout(null);
         this.setBounds(0, 0, anchoVentana, largoVentana);
-        this.setBackground(Color.BLUE);
         botones();
     }
     
-    public void setWindow (VentanaPedido window_aux){
+    public void setWindow (Ventana window_aux){
         window = window_aux;
+    }
+    
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(Color.BLUE);
+        g.fillRect(this.getX(), this.getY(), this.getWidth(), this.getHeight());
     }
     
     private void botones() {
@@ -32,9 +38,11 @@ public class MenuPrincipal extends JPanel{
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 window.setComponentZOrder(window.getMenu(), 1);
                 window.setComponentZOrder(window.getBase(), 0);
+                window.setComponentZOrder(window.getVista(), 2);
                 
                 window.getMenu().setVisible(false);
                 window.getBase().setVisible(true);
+                window.getVista().setVisible(false);
                 
                 repaint();
             }
