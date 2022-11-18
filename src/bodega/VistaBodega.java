@@ -4,10 +4,16 @@ import javax.swing.*;
 
 public class VistaBodega extends JPanel{
     
+    private Ventana window;
+    
     VistaBodega(int anchoVentana, int largoVentana){
         this.setLayout(null);
         this.setBounds(0, 0, anchoVentana, largoVentana);
         this.setBackground(Color.RED);
+    }
+    
+    public void setWindow (Ventana window_aux){
+        window = window_aux;
     }
     
     @Override

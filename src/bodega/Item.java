@@ -12,7 +12,8 @@ public class Item extends JPanel{
         private String descripcion;
         private BufferedImage imagen;
 	
-	public Item(String nombre_aux, String descripcion_aux, String ubicacion) throws IOException{
+	public Item(String nombre_aux, String descripcion_aux, String ubicacion)
+                throws IOException{
             cantidad = 0;
             nombre = nombre_aux;
             descripcion = descripcion_aux;

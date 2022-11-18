@@ -30,18 +30,20 @@ public class Ventana extends JFrame {
         this.getContentPane().add(principal);
         this.getContentPane().add(vista);
         
-        principal.setVisible(true);
         base.setVisible(false);
         vista.setVisible(false);
                 
         this.setComponentZOrder(principal, 0);
         this.setComponentZOrder(base, 1);
         this.setComponentZOrder(vista, 2);
+        
+        repaint();
     }
     
     private void setWindowInComponents(){
         principal.setWindow(this);
         base.setWindow(this);
+        vista.setWindow(this);
     }
     
     public MenuPrincipal getMenu(){
