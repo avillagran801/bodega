@@ -10,14 +10,16 @@ public class Item extends JPanel{
 	private int cantidad;
         private String nombre;
         private String descripcion;
+        private String unidadDeMedida;
         private BufferedImage imagen;
 	
-	public Item(String nombre_aux, String descripcion_aux, String ubicacion)
+	public Item(String nombre_aux, String descripcion_aux, String unidad_aux, String ubicacion)
                 throws IOException{
             cantidad = 0;
             nombre = nombre_aux;
             descripcion = descripcion_aux;
             imagen = ImageIO.read(getClass().getResourceAsStream(ubicacion));
+            unidadDeMedida = unidad_aux;
 	}
         
         public void paintComponent(Graphics g, int imagenY, int textoY) {
@@ -42,6 +44,10 @@ public class Item extends JPanel{
 	public void sumarCantidad(){
             cantidad++;
 	}
+        
+        public String getCantidadConUnidad(){
+            return cantidad + " " + unidadDeMedida;
+        }
 	
 	public void restarCantidad(){
             if(cantidad > 0){

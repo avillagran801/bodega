@@ -92,47 +92,47 @@ public class BasePedidos extends JPanel{
     }
     
     private void resumenPedido(Graphics g){
-        int posY = 100;
+        int posY = 110;
         int saltoLinea = 30;
         g.setColor(Color.white);
-        Font letraMediana = new Font("SansSerif.", 1, 14);
+        Font letraMediana = new Font("SansSerif.", 1, 12);
         g.setFont(letraMediana);
         
         if(lista.getManzana().getCantidad() != 0){
             posY = posY + saltoLinea;
-            g.drawString("Manzana: " + lista.getManzana().getCantidad(), 980, posY);
+            g.drawString("Manzana: " + lista.getManzana().getCantidadConUnidad(), 980, posY);
         }
         if(lista.getNaranja().getCantidad() != 0){
             posY = posY + saltoLinea;
-            g.drawString("Naranja: " + lista.getNaranja().getCantidad(), 980, posY);
+            g.drawString("Naranja: " + lista.getNaranja().getCantidadConUnidad(), 980, posY);
         }
         if(lista.getPlatano().getCantidad() != 0){
             posY = posY + saltoLinea;
-            g.drawString("Platano: " + lista.getPlatano().getCantidad(), 980, posY);
+            g.drawString("Platano: " + lista.getPlatano().getCantidadConUnidad(), 980, posY);
         }
         if(lista.getLechuga().getCantidad() != 0){
             posY = posY + saltoLinea;
-            g.drawString("Lechuga: " + lista.getLechuga().getCantidad(), 980, posY);
+            g.drawString("Lechuga: " + lista.getLechuga().getCantidadConUnidad(), 980, posY);
         }
         if(lista.getTomate().getCantidad() != 0){
             posY = posY + saltoLinea;
-            g.drawString("Tomate: " + lista.getTomate().getCantidad(), 980, posY);
+            g.drawString("Tomate: " + lista.getTomate().getCantidadConUnidad(), 980, posY);
         }
         if(lista.getPepino().getCantidad() != 0){
             posY = posY + saltoLinea;
-            g.drawString("Pepino: " + lista.getPepino().getCantidad(), 980, posY);
+            g.drawString("Pepino: " + lista.getPepino().getCantidadConUnidad(), 980, posY);
         }
         if (lista.getPollo().getCantidad() != 0) {
             posY = posY + saltoLinea;
-            g.drawString("Pollo: " + lista.getPollo().getCantidad(), 980, posY);
+            g.drawString("Pollo: " + lista.getPollo().getCantidadConUnidad(), 980, posY);
         }
         if (lista.getHamburguesa().getCantidad() != 0) {
             posY = posY + saltoLinea;
-            g.drawString("Hamburguesa: " + lista.getHamburguesa().getCantidad(), 980, posY);
+            g.drawString("Hamburguesa: " + lista.getHamburguesa().getCantidadConUnidad(), 980, posY);
         }
         if (lista.getChurrasco().getCantidad() != 0) {
             posY = posY + saltoLinea;
-            g.drawString("Churrasco: " + lista.getChurrasco().getCantidad(), 980, posY);
+            g.drawString("Churrasco: " + lista.getChurrasco().getCantidadConUnidad(), 980, posY);
         }
     }
 }
