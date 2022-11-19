@@ -14,7 +14,7 @@ public class BasePedidos extends JPanel{
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
         BotonesPedido botones = new BotonesPedido(this);
-        lista = new ListaPedido(); 
+        //lista = new ListaPedido(); 
     }
     
     public void setWindow(Ventana window_aux) {
@@ -85,6 +85,10 @@ public class BasePedidos extends JPanel{
     
     public int getCategoria(){
         return categoria;
+    }
+    
+    public void nuevaListaPedido() throws IOException{
+        lista = new ListaPedido();
     }
     
     public ListaPedido getListaPedido(){

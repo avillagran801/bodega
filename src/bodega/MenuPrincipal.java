@@ -1,5 +1,8 @@
 package bodega;
 import java.awt.*;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 public class MenuPrincipal extends JPanel{
@@ -22,8 +25,8 @@ public class MenuPrincipal extends JPanel{
     }
     
     private void botones() {
-        JButton inicio = new JButton("Iniciar Pedido");
-        inicio.setBounds((this.getWidth()/2)-100, (this.getHeight()/2)-100, 200, 70);
+        JButton inicio = new JButton("Iniciar Nuevo Pedido");
+        inicio.setBounds((this.getWidth()/2)-150, (this.getHeight()/2)-100, 300, 70);
         inicio.setBorderPainted(false);
         //inicio.setContentAreaFilled(false);
         inicio.setBackground(Color.white);
@@ -41,16 +44,29 @@ public class MenuPrincipal extends JPanel{
                 window.getBase().setVisible(true);
                 window.getVista().setVisible(false);
                 
+                try {
+                    window.getBase().nuevaListaPedido();
+                } catch (IOException ex) {
+                    Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 repaint();
             }
         });
         
-        JButton historial = new JButton("Historial pedidos");
+        JButton historial = new JButton("Historial Pedidos");
         historial.setBounds((this.getWidth()/2)-100, (this.getHeight()/2), 200, 70);
         historial.setBorderPainted(false);
         historial.setBackground(Color.white);
         historial.setForeground(Color.black);        
         historial.setFont(new Font("SansSerif.", 1, 16));
+        
+        historial.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                window.getHistorial().imprimirPedidos();
+            }
+        });
         
         this.add(inicio);
         this.add(historial);

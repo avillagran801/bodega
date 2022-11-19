@@ -83,6 +83,9 @@ public class BotonesPedido{
                 base.setVisible(false);
                 base.getWindow().getVista().setVisible(true);
                 
+                base.getWindow().getHistorial().agregarLista(base.getListaPedido());
+                base.setCategoria(0);
+                
                 base.repaint();
             }
         });
