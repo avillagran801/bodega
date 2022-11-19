@@ -3,7 +3,6 @@ import java.awt.*;
 import javax.swing.*;
 
 public class MenuPrincipal extends JPanel{
-    
     private Ventana window;
     
     public MenuPrincipal (int anchoVentana, int largoVentana) {
@@ -24,10 +23,11 @@ public class MenuPrincipal extends JPanel{
     
     private void botones() {
         JButton inicio = new JButton("Iniciar Pedido");
-        inicio.setBounds((this.getWidth()/2)-100, (this.getHeight()/2)-100, 200, 200);
+        inicio.setBounds((this.getWidth()/2)-100, (this.getHeight()/2)-100, 200, 70);
         inicio.setBorderPainted(false);
-        inicio.setContentAreaFilled(false);
-        inicio.setForeground(Color.white);        
+        //inicio.setContentAreaFilled(false);
+        inicio.setBackground(Color.white);
+        inicio.setForeground(Color.black);        
         inicio.setFont(new Font("SansSerif.", 1, 16));
         
         inicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -45,6 +45,14 @@ public class MenuPrincipal extends JPanel{
             }
         });
         
+        JButton historial = new JButton("Historial pedidos");
+        historial.setBounds((this.getWidth()/2)-100, (this.getHeight()/2), 200, 70);
+        historial.setBorderPainted(false);
+        historial.setBackground(Color.white);
+        historial.setForeground(Color.black);        
+        historial.setFont(new Font("SansSerif.", 1, 16));
+        
         this.add(inicio);
+        this.add(historial);
     }
 }

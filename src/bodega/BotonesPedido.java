@@ -68,7 +68,6 @@ public class BotonesPedido{
         JButton finPedido = new JButton("Finalizar Pedido");
         finPedido.setBounds(980, 680, 190, 40);
         finPedido.setBorderPainted(false);
-        // Agregar un color que destaque
         finPedido.setBackground(Color.white);
         finPedido.setForeground(Color.black);
         finPedido.setFont(new Font("SansSerif.", 1, 16));

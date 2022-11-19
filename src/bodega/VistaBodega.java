@@ -33,6 +33,7 @@ public class VistaBodega extends JPanel{
     private void botonVolver(){
         JButton volver = new JButton("Volver a inicio");
         volver.setBounds(30, 30, 150, 40);
+        volver.setBorderPainted(false);
         volver.setBackground(Color.white);
         volver.setForeground(Color.black);        
         volver.setFont(new Font("SansSerif.", 1, 12));
