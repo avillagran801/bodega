@@ -1,5 +1,6 @@
 package bodega;
 
+import GUI.*;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
@@ -9,19 +10,22 @@ import botones.*;
 public class HistorialPedidos extends JPanel {
     private ArrayList<ListaPedido> pedidos;
     private Ventana window;
+    private PaintToolHistorialPedidos paint;
     
     public HistorialPedidos(int anchoVentana, int largoVentana){     
         this.setLayout(null);
-        this.setBackground(Color.darkGray);
+        this.setBackground(new Color(54, 73, 88));
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
-        pedidos = new ArrayList<ListaPedido>();      
+        pedidos = new ArrayList<ListaPedido>(); 
+        paint = new PaintToolHistorialPedidos(this);
         BotonesHistorial botones = new BotonesHistorial(this);
     }
     
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        paint.paintComponent(g);
     }
     
     public void agregarLista(ListaPedido nuevaLista){
@@ -34,6 +38,10 @@ public class HistorialPedidos extends JPanel {
     
     public Ventana getWindow(){
         return window;
+    }
+    
+    public ArrayList getPedidos(){
+        return pedidos;
     }
     
     // Método solamente para probar en la consola

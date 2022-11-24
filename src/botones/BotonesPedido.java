@@ -2,6 +2,7 @@ package botones;
 
 import bodega.*;
 import java.awt.*;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class BotonesPedido{
@@ -13,12 +14,13 @@ public class BotonesPedido{
         finPedido();
         cantidadProducto();
     }
-    
+
     private void selectorCategoria(){       
         JButton frutas = new JButton("Frutas");
         frutas.setBounds(20, 100, 130, 60);
         frutas.setBorderPainted(false);
         frutas.setContentAreaFilled(false);
+        frutas.setFocusPainted(false);
         frutas.setForeground(Color.white);
         frutas.setFont(new Font("SansSerif.", 1, 16));
         
@@ -34,6 +36,7 @@ public class BotonesPedido{
         verduras.setBounds(20, 180, 130, 60);
         verduras.setBorderPainted(false);
         verduras.setContentAreaFilled(false);
+        verduras.setFocusPainted(false);
         verduras.setForeground(Color.white);        
         verduras.setFont(new Font("SansSerif.", 1, 16));
 
@@ -49,6 +52,7 @@ public class BotonesPedido{
         carnes.setBounds(20, 260, 130, 60);
         carnes.setBorderPainted(false);
         carnes.setContentAreaFilled(false);
+        carnes.setFocusPainted(false);
         carnes.setForeground(Color.white);
         carnes.setFont(new Font("SansSerif.", 1, 16));        
         
@@ -69,6 +73,7 @@ public class BotonesPedido{
         JButton finPedido = new JButton("Finalizar Pedido");
         finPedido.setBounds(980, 680, 190, 40);
         finPedido.setBorderPainted(false);
+        finPedido.setFocusPainted(false);
         finPedido.setBackground(Color.white);
         finPedido.setForeground(Color.black);
         finPedido.setFont(new Font("SansSerif.", 1, 16));
@@ -92,17 +97,15 @@ public class BotonesPedido{
         });
 
         base.add(finPedido);
-    }
-    
-    private void cantidadProducto(){
-        Color rojoOscuro = new Color(158, 42, 43);
-        Color verde = new Color(52, 78, 65);
-        
+    }    
+   
+    private void cantidadProducto(){        
         JButton mas0 = new JButton();
         mas0.setBounds(850, 140, 25, 25);
         mas0.setBorderPainted(false);
-        mas0.setBackground(verde);
-        
+        mas0.setContentAreaFilled(false);
+        mas0.setFocusPainted(false);
+
         mas0.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -114,7 +117,8 @@ public class BotonesPedido{
         JButton menos0 = new JButton();
         menos0.setBounds(750, 140, 25, 25);
         menos0.setBorderPainted(false);
-        menos0.setBackground(rojoOscuro);
+        menos0.setContentAreaFilled(false);
+        menos0.setFocusPainted(false);
         
         menos0.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -127,7 +131,8 @@ public class BotonesPedido{
         JButton mas1 = new JButton();
         mas1.setBounds(850, 340, 25, 25);
         mas1.setBorderPainted(false);
-        mas1.setBackground(verde);
+        mas1.setContentAreaFilled(false);
+        mas1.setFocusPainted(false);
         
         mas1.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -140,7 +145,8 @@ public class BotonesPedido{
         JButton menos1 = new JButton();
         menos1.setBounds(750, 340, 25, 25);
         menos1.setBorderPainted(false);
-        menos1.setBackground(rojoOscuro);
+        menos1.setContentAreaFilled(false);
+        menos1.setFocusPainted(false);
         
         menos1.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -153,7 +159,8 @@ public class BotonesPedido{
         JButton mas2 = new JButton();
         mas2.setBounds(850, 540, 25, 25);
         mas2.setBorderPainted(false);
-        mas2.setBackground(verde);
+        mas2.setContentAreaFilled(false);
+        mas2.setFocusPainted(false);
         
         mas2.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -166,7 +173,8 @@ public class BotonesPedido{
         JButton menos2 = new JButton();
         menos2.setBounds(750, 540, 25, 25);
         menos2.setBorderPainted(false);
-        menos2.setBackground(rojoOscuro);
+        menos2.setContentAreaFilled(false);
+        menos2.setFocusPainted(false);
         
         menos2.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -175,6 +183,36 @@ public class BotonesPedido{
                 base.repaint();
             }
         });
+        
+        try {
+            // Obtiene imagen
+            Image img = ImageIO.read(getClass().getResourceAsStream("/res/plusWhite.png"));
+            
+            // Escala la imagen
+            Image newImg = img.getScaledInstance(mas0.getWidth(), mas0.getHeight(),Image.SCALE_DEFAULT);
+            
+            // Asigna la imagen como ícono al botón
+           mas0.setIcon(new ImageIcon(newImg));
+           mas1.setIcon(new ImageIcon(newImg));
+           mas2.setIcon(new ImageIcon(newImg));
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        
+        try {
+            // Obtiene imagen
+            Image img = ImageIO.read(getClass().getResourceAsStream("/res/minusWhite.png"));
+
+            // Escala la imagen
+            Image newImg = img.getScaledInstance(mas0.getWidth(), mas0.getHeight(), Image.SCALE_DEFAULT);
+
+            // Asigna la imagen como ícono al botón
+            menos0.setIcon(new ImageIcon(newImg));
+            menos1.setIcon(new ImageIcon(newImg));
+            menos2.setIcon(new ImageIcon(newImg));
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
 
         base.add(mas0);
         base.add(menos0);

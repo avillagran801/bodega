@@ -10,7 +10,7 @@ public class BotonesMenu {
         JButton inicio = new JButton("Iniciar Nuevo Pedido");
         inicio.setBounds((menu.getWidth()/2)-150, (menu.getHeight()/2)-100, 300, 70);
         inicio.setBorderPainted(false);
-        //inicio.setContentAreaFilled(false);
+        inicio.setFocusPainted(false);
         inicio.setBackground(Color.white);
         inicio.setForeground(Color.black);        
         inicio.setFont(new Font("SansSerif.", 1, 16));
@@ -41,6 +41,7 @@ public class BotonesMenu {
         JButton historial = new JButton("Historial Pedidos");
         historial.setBounds((menu.getWidth()/2)-100, (menu.getHeight()/2), 200, 70);
         historial.setBorderPainted(false);
+        historial.setFocusPainted(false);
         historial.setBackground(Color.white);
         historial.setForeground(Color.black);        
         historial.setFont(new Font("SansSerif.", 1, 16));

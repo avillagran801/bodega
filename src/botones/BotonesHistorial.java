@@ -16,22 +16,23 @@ public class BotonesHistorial {
     
     private void VolverAlMenu(){
         JButton volver = new JButton();
+        volver.setBounds(20, 20, 40, 40);
+        volver.setBorderPainted(false);
+        volver.setContentAreaFilled(false);
+        volver.setFocusPainted(false);
+        
         try {
             // Obtiene imagen
-            Image img = ImageIO.read(getClass().getResourceAsStream("/res/home.png"));
+            Image img = ImageIO.read(getClass().getResourceAsStream("/res/homeWhite.png"));
             
             // Escala la imagen
-            Image newImg = img.getScaledInstance(100, 100,Image.SCALE_DEFAULT);
+            Image newImg = img.getScaledInstance(volver.getWidth(), volver.getHeight(),Image.SCALE_DEFAULT);
             
             // Asigna la imagen como ícono al botón
             volver.setIcon(new ImageIcon(newImg));
         } catch (Exception ex) {
             System.out.println(ex);
         }
-        
-        volver.setBounds(20, 20, 80, 80);
-        volver.setBorderPainted(false);
-        volver.setContentAreaFilled(false);
         
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override

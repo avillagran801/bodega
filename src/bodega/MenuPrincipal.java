@@ -9,7 +9,7 @@ public class MenuPrincipal extends JPanel{
     
     public MenuPrincipal (int anchoVentana, int largoVentana) {
         this.setLayout(null);
-        this.setBackground(Color.BLUE);
+        this.setBackground(new Color(54, 73, 88));
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
         BotonesMenu botones = new BotonesMenu(this);
