@@ -1,6 +1,6 @@
 package botones;
 
-import bodega.BasePedidos;
+import bodega.*;
 import java.awt.*;
 import javax.swing.*;
 

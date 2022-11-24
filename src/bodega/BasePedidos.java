@@ -1,6 +1,6 @@
 package bodega;
 
-import botones.BotonesPedido;
+import botones.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
