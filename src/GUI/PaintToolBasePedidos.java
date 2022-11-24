@@ -1,11 +1,8 @@
 package GUI;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import javax.swing.JPanel;
-import bodega.ListaPedido;
-import bodega.BasePedidos;
+import java.awt.*;
+import javax.swing.*;
+import bodega.*;
 
 public class PaintToolBasePedidos extends JPanel{
     private ListaPedido lista;

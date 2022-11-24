@@ -3,6 +3,7 @@ package bodega;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
+import botones.*;
 
 
 public class HistorialPedidos extends JPanel {
@@ -14,7 +15,8 @@ public class HistorialPedidos extends JPanel {
         this.setBackground(Color.darkGray);
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
-        pedidos = new ArrayList<ListaPedido>();
+        pedidos = new ArrayList<ListaPedido>();      
+        BotonesHistorial botones = new BotonesHistorial(this);
     }
     
     @Override
@@ -28,6 +30,10 @@ public class HistorialPedidos extends JPanel {
     
     public void setWindow (Ventana window_aux){
         window = window_aux;
+    }
+    
+    public Ventana getWindow(){
+        return window;
     }
     
     // Método solamente para probar en la consola
