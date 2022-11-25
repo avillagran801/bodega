@@ -7,7 +7,7 @@ public class VistaAerea extends JPanel{
     
     public VistaAerea(int anchoVentana, int largoVentana){
         this.setLayout(null);
-        this.setBounds(0, 0, anchoVentana/2, largoVentana);
+        this.setBounds(0, 0, anchoVentana, largoVentana);
         this.setOpaque(false);
     }
     
@@ -15,7 +15,7 @@ public class VistaAerea extends JPanel{
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         
-        g.setColor(Color.red);
+        g.setColor(Color.darkGray);
         g.fillRect(this.getX(), this.getY(), this.getWidth(), this.getHeight());
         
         g.setColor(Color.white);

@@ -90,6 +90,7 @@ public class BotonesPedido{
                 base.getWindow().getVista().setVisible(true);
                 
                 base.getWindow().getHistorial().agregarLista(base.getListaPedido());
+                base.getWindow().getVista().setListaActual(base.getListaPedido());
                 base.setCategoria(0);
                 
                 base.repaint();

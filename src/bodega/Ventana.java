@@ -7,7 +7,7 @@ import javax.swing.*;
 public class Ventana extends JFrame {
     private BasePedidos base;
     private MenuPrincipal menu;
-    private VistaBodega vista;
+    private VistaCompra vista;
     private HistorialPedidos historial;
 
     public Ventana() throws IOException {
@@ -23,7 +23,7 @@ public class Ventana extends JFrame {
         
         menu = new MenuPrincipal(this.getWidth(), this.getHeight());
         base = new BasePedidos(this.getWidth(), this.getHeight());
-        vista = new VistaBodega(this.getWidth(), this.getHeight());
+        vista = new VistaCompra(this.getWidth(), this.getHeight());
         historial = new HistorialPedidos(this.getWidth(), this.getHeight());
         
         setWindowInComponents();
@@ -60,7 +60,7 @@ public class Ventana extends JFrame {
         return base;
     }
     
-    public VistaBodega getVista(){
+    public VistaCompra getVista(){
         return vista;
     }
     

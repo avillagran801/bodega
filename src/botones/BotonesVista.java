@@ -5,17 +5,20 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class BotonesHistorial {
-    private HistorialPedidos historial;
+public class BotonesVista {
+    private VistaCompra vista;
     
-    public BotonesHistorial(HistorialPedidos historial_aux){
-        historial = historial_aux;
+    public BotonesVista(VistaCompra vista_aux){
+        vista = vista_aux;
         
-        VolverAlMenu();
+        botonVolver();
     }
     
-    private void VolverAlMenu(){
+    private void botonVolver(){
         JButton volver = new JButton();
+        
+        // Por alguna extraña razón de la vida el botón no aparece en la posición que debería
+        
         volver.setBounds(20, 20, 40, 40);
         volver.setBorderPainted(false);
         volver.setContentAreaFilled(false);
@@ -37,18 +40,19 @@ public class BotonesHistorial {
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                historial.getWindow().setComponentZOrder(historial.getWindow().getMenu(), 0);
-                historial.getWindow().setComponentZOrder(historial.getWindow().getBase(), 1);
-                historial.getWindow().setComponentZOrder(historial.getWindow().getVista(), 2);
-                historial.getWindow().setComponentZOrder(historial.getWindow().getHistorial(), 3);
+                vista.getWindow().setComponentZOrder(vista.getWindow().getMenu(), 0);
+                vista.getWindow().setComponentZOrder(vista.getWindow().getBase(), 1);
+                vista.getWindow().setComponentZOrder(vista.getWindow().getVista(), 2);
+                vista.getWindow().setComponentZOrder(vista.getWindow().getHistorial(), 3);
                 
-                historial.getWindow().getMenu().setVisible(true);
-                historial.getWindow().getBase().setVisible(false);
-                historial.getWindow().getVista().setVisible(false);
-                historial.getWindow().getHistorial().setVisible(false);
+                vista.getWindow().getMenu().setVisible(true);
+                vista.getWindow().getBase().setVisible(false);
+                vista.getWindow().getVista().setVisible(false);
+                vista.getWindow().getHistorial().setVisible(false);
             }
         });
         
-        historial.add(volver);
+        vista.add(volver);
     }
+    
 }
