@@ -18,7 +18,7 @@ public class PaintToolHistorialPedidos extends JPanel{
         
         g.setColor(Color.white);
         Font letraGrande = new Font("SansSerif.", 1, 16);
-        Font letraMediana = new Font("SansSerif.", 1, 12);
+        //Font letraMediana = new Font("SansSerif.", 1, 12);
         int posY = 100;
         int saltoLinea = 30;
         
@@ -29,48 +29,61 @@ public class PaintToolHistorialPedidos extends JPanel{
                 ListaPedido lista = (ListaPedido)historial.getPedidos().get(i);
                 
                 g.setFont(letraGrande);    
-                g.drawString("Pedido número: " + i, 100, posY);
+                g.drawString("Pedido número: " + (i+1), 100, posY);
                 posY += 40;
 
                 if(lista.getManzana().getCantidad() != 0){
-                    g.drawString("Manzana: " + lista.getManzana().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Manzana: " + 
+                            lista.getManzana().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if(lista.getNaranja().getCantidad() != 0){                    
-                    g.drawString("Naranja: " + lista.getNaranja().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Naranja: " + 
+                            lista.getNaranja().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if(lista.getPlatano().getCantidad() != 0){
-                    g.drawString("Platano: " + lista.getPlatano().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Platano: " + 
+                            lista.getPlatano().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if(lista.getLechuga().getCantidad() != 0){
-                    g.drawString("Lechuga: " + lista.getLechuga().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Lechuga: " + 
+                            lista.getLechuga().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if(lista.getTomate().getCantidad() != 0){
-                    g.drawString("Tomate: " + lista.getTomate().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Tomate: " + 
+                            lista.getTomate().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if(lista.getPepino().getCantidad() != 0){
-                    g.drawString("Pepino: " + lista.getPepino().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Pepino: " + 
+                            lista.getPepino().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if (lista.getPollo().getCantidad() != 0) {  
-                    g.drawString("Pollo: " + lista.getPollo().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Pollo: " + 
+                            lista.getPollo().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 if (lista.getHamburguesa().getCantidad() != 0) {
-                    g.drawString("Hamburguesa: " + lista.getHamburguesa().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Hamburguesa: " + 
+                            lista.getHamburguesa().getCantidadConUnidad(), 130, 
+                            posY);
                     posY += saltoLinea;
                 }
                 if (lista.getChurrasco().getCantidad() != 0) {
-                    g.drawString("Churrasco: " + lista.getChurrasco().getCantidadConUnidad(), 130, posY);
+                    g.drawString("Churrasco: " + 
+                            lista.getChurrasco().getCantidadConUnidad(), 130, posY);
                     posY += saltoLinea;
                 }
                 
                 posY += 40;
             }
+            /*if(posY > historial.getHeight()){
+                historial.setBounds(0, 0, historial.getWidth(), posY);
+            }*/
         }
 
     }

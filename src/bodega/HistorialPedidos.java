@@ -11,14 +11,19 @@ public class HistorialPedidos extends JPanel {
     private ArrayList<ListaPedido> pedidos;
     private Ventana window;
     private PaintToolHistorialPedidos paint;
+    private JScrollPane deslizador;
     
     public HistorialPedidos(int anchoVentana, int largoVentana){     
         this.setLayout(null);
         this.setBackground(new Color(54, 73, 88));
         this.setBounds(0, 0, anchoVentana, largoVentana);
+        this.setPreferredSize(new Dimension(anchoVentana, largoVentana));
         
+        deslizador = new JScrollPane();
+        deslizador.setBounds(0,0, this.getWidth(), this.getHeight());
         pedidos = new ArrayList<ListaPedido>(); 
         paint = new PaintToolHistorialPedidos(this);
+        deslizador.add(paint);
         BotonesHistorial botones = new BotonesHistorial(this);
     }
     
@@ -26,6 +31,7 @@ public class HistorialPedidos extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         paint.paintComponent(g);
+        deslizador.revalidate();
     }
     
     public void agregarLista(ListaPedido nuevaLista){

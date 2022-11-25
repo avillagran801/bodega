@@ -16,10 +16,7 @@ public class BotonesVista {
     
     private void botonVolver(){
         JButton volver = new JButton();
-        
-        // Por alguna extraña razón de la vida el botón no aparece en la posición que debería
-        
-        volver.setBounds(20, 20, 40, 40);
+        volver.setBounds(20, 60, 40, 40);
         volver.setBorderPainted(false);
         volver.setContentAreaFilled(false);
         volver.setFocusPainted(false);
@@ -29,7 +26,8 @@ public class BotonesVista {
             Image img = ImageIO.read(getClass().getResourceAsStream("/res/homeWhite.png"));
             
             // Escala la imagen
-            Image newImg = img.getScaledInstance(volver.getWidth(), volver.getHeight(),Image.SCALE_DEFAULT);
+            Image newImg = img.getScaledInstance(volver.getWidth(), 
+                    volver.getHeight(),Image.SCALE_DEFAULT);
             
             // Asigna la imagen como ícono al botón
             volver.setIcon(new ImageIcon(newImg));
