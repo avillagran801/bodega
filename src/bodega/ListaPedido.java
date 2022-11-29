@@ -1,6 +1,7 @@
 package bodega;
 
 import java.io.IOException;
+import java.util.Calendar;
 
 public class ListaPedido{
     private Item manzana;
@@ -12,6 +13,7 @@ public class ListaPedido{
     private Item pollo;
     private Item hamburguesa;
     private Item churrasco;
+    private Calendar fecha;
     
     public ListaPedido() throws IOException {
         manzana = new Item("Manzana", "(1 kilo)", "kilo(s)" ,"/res/manzana.png");
@@ -23,6 +25,11 @@ public class ListaPedido{
         pollo = new Item("Pollo", "(1 kilo)", "kilo(s)", "/res/pollo.png");
         hamburguesa = new Item("Hamburguesa", "(1 unidad)", "unidad(es)", "/res/hamburguesa.png");
         churrasco = new Item("Churrasco", "(1 unidad)", "unidad(es)","/res/churrasco.png");
+        fecha = Calendar.getInstance();
+    }
+    
+    public Calendar getFecha(){
+        return fecha;
     }
     
     public Item getManzana(){
