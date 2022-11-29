@@ -7,9 +7,12 @@ import java.util.ArrayList;
 
 public class PaintToolHistorialPedidos extends JPanel{
     private HistorialPedidos historial;
-    
+
     public PaintToolHistorialPedidos(HistorialPedidos hist_aux){
         historial = hist_aux;
+        this.setBackground(new Color(54, 73, 88));
+        this.setPreferredSize(new Dimension(historial.getWidth(), 
+                historial.getHeight()-120));
     }
 
     @Override
@@ -18,13 +21,11 @@ public class PaintToolHistorialPedidos extends JPanel{
         
         g.setColor(Color.white);
         Font letraGrande = new Font("SansSerif.", 1, 16);
-        //Font letraMediana = new Font("SansSerif.", 1, 12);
         int posY = 100;
         int saltoLinea = 30;
         
         if(!historial.getPedidos().isEmpty()){
-            
-            // Cambiar el 2. Es solamente para probar que se imprimen
+
             for(int i=0; i<historial.getPedidos().size(); ++i){
                 ListaPedido lista = (ListaPedido)historial.getPedidos().get(i);
                 
@@ -81,9 +82,9 @@ public class PaintToolHistorialPedidos extends JPanel{
                 
                 posY += 40;
             }
-            /*if(posY > historial.getHeight()){
-                historial.setBounds(0, 0, historial.getWidth(), posY);
-            }*/
+            if (posY > historial.getHeight()){
+                this.setPreferredSize(new Dimension(historial.getWidth(), posY));
+            }
         }
 
     }

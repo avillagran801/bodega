@@ -19,18 +19,22 @@ public class HistorialPedidos extends JPanel {
         this.setBounds(0, 0, anchoVentana, largoVentana);
         this.setPreferredSize(new Dimension(anchoVentana, largoVentana));
         
-        deslizador = new JScrollPane();
-        deslizador.setBounds(0,0, this.getWidth(), this.getHeight());
         pedidos = new ArrayList<ListaPedido>(); 
         paint = new PaintToolHistorialPedidos(this);
-        deslizador.add(paint);
+        
         BotonesHistorial botones = new BotonesHistorial(this);
+
+        deslizador = new JScrollPane(paint);
+        deslizador.setBounds(0,100, this.getWidth()-12, this.getHeight()-120);
+        deslizador.getVerticalScrollBar().setUnitIncrement(16);
+        deslizador.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+        this.add(deslizador);
     }
     
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        paint.paintComponent(g);
         deslizador.revalidate();
     }
     
