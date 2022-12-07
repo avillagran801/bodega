@@ -20,7 +20,11 @@ public class VistaCompra extends JPanel{
         carro = new VistaCarro(anchoVentana, largoVentana);
         BotonesVista botones = new BotonesVista(this);
         paint = new PaintToolVistaCompra(this);
-        
+        setViews(aerea);
+    }
+    
+    public void setViews(VistaAerea aerial){
+        aerial.vista = this;
     }
     
     public void setWindow (Ventana window_aux){
@@ -29,6 +33,10 @@ public class VistaCompra extends JPanel{
     
     public Ventana getWindow(){
         return window;
+    }
+    
+    public VistaAerea getAerea(){
+        return aerea;
     }
     
     public ListaPedido getListaActual(){

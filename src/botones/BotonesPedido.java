@@ -94,6 +94,7 @@ public class BotonesPedido{
                 base.setCategoria(0);
                 
                 base.repaint();
+                base.getWindow().getVista().getAerea().temporizador.start();
             }
         });
 

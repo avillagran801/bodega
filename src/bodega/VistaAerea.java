@@ -1,25 +1,33 @@
 package bodega;
 
-import GUI.VistaAereaAnimacion;
 import java.awt.*;
 import javax.swing.*;
+import GUI.Carrito;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class VistaAerea extends JPanel{
+public class VistaAerea extends JPanel implements ActionListener{
     
-    VistaAereaAnimacion animation;
+    public Timer temporizador;
+    private Carrito carrito;
+    VistaCompra vista;
+    
     
     public VistaAerea(int anchoVentana, int largoVentana){
         this.setLayout(null);
         this.setBounds(0, 0, anchoVentana, largoVentana);
         this.setOpaque(false);
-        
-        
+        this.setFocusable(true);
+        temporizador = new Timer(100, this);
+        carrito = new Carrito();
     }
     
-    private void createAnimation(Graphics g){
-        animation = new VistaAereaAnimacion(this, g);
-        this.add(animation);
+    @Override
+    public void actionPerformed(ActionEvent e){
+        vista.repaint();
+        this.update();
     }
+    
     
     @Override
     public void paintComponent(Graphics g) {
@@ -68,11 +76,11 @@ public class VistaAerea extends JPanel{
         g.setColor(new Color(208,60,85));
         g.fillRect(300, 650, 300, 100);
         
-        //Animación
-        if(animation != null){
-            animation.getThread().run();
-        } else {
-            createAnimation(g);
-        }
+        //Carrito
+        carrito.paint(g);
+    }
+    
+    public void update(){
+        carrito.update();
     }
 }
