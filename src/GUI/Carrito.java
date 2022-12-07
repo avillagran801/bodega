@@ -27,4 +27,11 @@ public class Carrito {
         pos_y = pos_y + vel_y;
     }
     
+    public void reset(){
+        pos_x = 100;
+        pos_y = 130;
+        vel_x = 0;
+        vel_y = 3;
+    }
+    
 }

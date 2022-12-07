@@ -52,6 +52,32 @@ public class VistaAerea extends JPanel implements ActionListener{
             g.fillRect(80+(i*150), 380, 150, 100);
             g.setColor(new Color (127, 97, 28));
             g.fillRect(90+(i*150), 380, 130, 90);
+            switch(i){
+                case 0:
+                    for(int k = 0; k < 9; k++){
+                        for (int j = 0; j < 13; j++){
+                            g.setColor(Color.red);
+                            g.fillOval(90+(j*10), 380+(k*10), 10, 10);
+                        }
+                    }
+                    break;
+                case 1:
+                    for(int k = 0; k < 9; k++){
+                        for (int j = 0; j < 13; j++){
+                            g.setColor(Color.ORANGE);
+                            g.fillOval(240+(j*10), 380+(k*10), 10, 10);
+                        }
+                    }
+                    break;
+                case 2:
+                    for(int k = 0; k < 9; k++){
+                        for (int j = 0; j < 13; j++){
+                            g.setColor(Color.YELLOW);
+                            g.fillOval(390+(j*10), 380+(k*10), 10, 10);
+                        }
+                    }
+                    break;
+            }
         }
         
         //Verduras
@@ -60,6 +86,32 @@ public class VistaAerea extends JPanel implements ActionListener{
             g.fillRect(370+(i*150), 115, 150, 100);
             g.setColor(new Color (127, 97, 28));
             g.fillRect(380+(i*150), 125, 130, 90);
+            switch(i){
+                case 0:
+                    for(int k = 0; k < 9; k++){
+                        for (int j = 0; j < 13; j++){
+                            g.setColor(new Color(89, 186, 75));
+                            g.fillOval(380+(j*10), 125+(k*10), 10, 10);
+                        }
+                    }
+                    break;
+                case 1:
+                    for(int k = 0; k < 9; k++){
+                        for (int j = 0; j < 13; j++){
+                            g.setColor(new Color(243, 24, 24));
+                            g.fillOval(530+(j*10), 125+(k*10), 10, 10);
+                        }
+                    }
+                    break;
+                case 2:
+                    for(int k = 0; k < 9; k++){
+                        for (int j = 0; j < 13; j++){
+                            g.setColor(new Color(0, 153, 0));
+                            g.fillOval(680+(j*10), 125+(k*10), 10, 10);
+                        }
+                    }
+                    break;
+            }
         }
         
         //Carnes
