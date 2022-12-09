@@ -6,8 +6,8 @@ import javax.swing.JSpinner;
 
 public class Carrito extends JSpinner{
     
-    private static int ancho = 80;
-    private static int alto = 100;
+    private static final int ancho = 80;
+    private static final int alto = 100;
     int pos_x = 100;
     int pos_y = 130;
     int vel_x = 0;
@@ -45,6 +45,38 @@ public class Carrito extends JSpinner{
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
                 break;
+            case 3:
+                g2d.translate(pos_x, pos_y);
+                g2d.rotate(Math.toRadians((double)giro));
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                giro+=3;
+                break;
+            case 4:
+                g2d.translate(pos_x, pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                break;
+            case 5:
+                g2d.translate(pos_x, pos_y);
+                g2d.rotate(Math.toRadians((double)giro));
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                giro+=3;
+                break;
+            case 6, 7:
+                g2d.translate((pos_x-alto), pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(((alto*9)/10), 0, (alto/10), ancho);
+                break;
         }
     }
     
@@ -66,6 +98,38 @@ public class Carrito extends JSpinner{
                     vel_y = 0;
                 }
                 break;
+            case 2:
+                if((pos_x+alto) > 735){
+                    flag = 3;
+                    vel_x= -2;
+                }
+                break;
+            case 3:
+                if(giro == 0){
+                    flag = 4;
+                    vel_x = 0;
+                    vel_y = 5;
+                }
+                break;
+            case 4:
+                if((pos_y+alto) > 560){
+                    flag = 5;
+                    vel_y = 3;
+                }
+                break;
+            case 5:
+                if(giro == 90){
+                    flag = 6;
+                    vel_x = -3;
+                    vel_y = 0;
+                }
+                break;
+            case 6:
+                if(pos_x <450){
+                    flag = 7;
+                    vel_x = 0;
+                }
+                break;
         }
     }
     
@@ -73,7 +137,8 @@ public class Carrito extends JSpinner{
         pos_x = 100;
         pos_y = 130;
         vel_x = 0;
-        vel_y = 3;
+        vel_y = 5;
+        giro = 0;
         flag = 0;
     }
     

@@ -47,6 +47,8 @@ public class BotonesVista {
                 vista.getWindow().getBase().setVisible(false);
                 vista.getWindow().getVista().setVisible(false);
                 vista.getWindow().getHistorial().setVisible(false);
+                vista.getAerea().carrito.reset();
+                vista.getAerea().temporizador.stop();
             }
         });
         

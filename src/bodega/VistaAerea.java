@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 public class VistaAerea extends JPanel implements ActionListener{
     
     public Timer temporizador;
-    private Carrito carrito;
+    public Carrito carrito;
     VistaCompra vista;
     
     
