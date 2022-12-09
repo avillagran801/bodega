@@ -5,6 +5,8 @@ import javax.swing.*;
 import GUI.Carrito;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class VistaAerea extends JPanel implements ActionListener{
     
@@ -19,13 +21,21 @@ public class VistaAerea extends JPanel implements ActionListener{
         this.setOpaque(false);
         this.setFocusable(true);
         temporizador = new Timer(100, this);
-        carrito = new Carrito();
+        carrito = new Carrito(this);
+    }
+    
+    public VistaCompra getCompra(){
+        return vista;
     }
     
     @Override
     public void actionPerformed(ActionEvent e){
         vista.repaint();
-        this.update();
+        try {
+            this.update();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(VistaAerea.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     
@@ -132,7 +142,7 @@ public class VistaAerea extends JPanel implements ActionListener{
         carrito.paint(g);
     }
     
-    public void update(){
+    public void update() throws InterruptedException{
         carrito.update();
     }
 }
