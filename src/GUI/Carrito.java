@@ -3,7 +3,12 @@ package GUI;
 import bodega.VistaAerea;
 import java.awt.Color;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JSpinner;
+import javax.swing.Timer;
+//import java.util.Timer;
+// import java.util.TimerTask;
 
 public class Carrito extends JSpinner{
     
@@ -40,7 +45,14 @@ public class Carrito extends JSpinner{
     public void paint(Graphics g_aux){
         Graphics2D g2d = (Graphics2D)g_aux.create();
         switch(flag){
-            case 0,1:
+            case 0:
+                g2d.translate(pos_x, pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                break;
+            case 1:    
                 g2d.translate(pos_x, pos_y);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, ancho, alto);
@@ -88,7 +100,14 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, ancho, (alto/10));
                 giro+=3;
                 break;
-            case 7, 8:
+            case 7:
+                g2d.translate((pos_x-alto), pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(((alto*9)/10), 0, (alto/10), ancho);
+                break;
+            case 8:
                 g2d.translate((pos_x-alto), pos_y);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, alto, ancho);
@@ -110,11 +129,12 @@ public class Carrito extends JSpinner{
                 break;
             case 1:
                 if(vista.getCompra().getListaActual().getManzana().getCantidad() != 0){
-                    vista.temporizador.wait(500);
-                    flag = 2;
-                } else {
+                    Pausa(2);
+                }
+                else {
                     flag = 2;
                 }
+                break;
             case 2:
                 if(giro == -90){
                     flag = 3;
@@ -168,5 +188,20 @@ public class Carrito extends JSpinner{
     
     public float getGiro(){
         return giro;
+    }
+    
+    private void Pausa(int num){
+        vista.pausa = true;
+        ActionListener taskPerformer = new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                vista.pausa = false;
+                flag = num;
+            }
+        };
+                    
+        Timer timer = new Timer(5000, taskPerformer);
+        timer.setRepeats(false);
+        timer.start();
     }
 }

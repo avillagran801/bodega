@@ -12,6 +12,7 @@ public class VistaAerea extends JPanel implements ActionListener{
     
     public Timer temporizador;
     public Carrito carrito;
+    public Boolean pausa;
     VistaCompra vista;
     
     
@@ -22,6 +23,7 @@ public class VistaAerea extends JPanel implements ActionListener{
         this.setFocusable(true);
         temporizador = new Timer(100, this);
         carrito = new Carrito(this);
+        pausa = false;
     }
     
     public VistaCompra getCompra(){
@@ -32,7 +34,9 @@ public class VistaAerea extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e){
         vista.repaint();
         try {
-            this.update();
+            if(!pausa){
+                this.update();               
+            }
         } catch (InterruptedException ex) {
             Logger.getLogger(VistaAerea.class.getName()).log(Level.SEVERE, null, ex);
         }
