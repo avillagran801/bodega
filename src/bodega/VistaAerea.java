@@ -2,7 +2,7 @@ package bodega;
 
 import java.awt.*;
 import javax.swing.*;
-import GUI.Carrito;
+import Graphics.Carrito;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;

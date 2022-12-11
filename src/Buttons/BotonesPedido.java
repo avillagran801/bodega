@@ -1,4 +1,4 @@
-package botones;
+package Buttons;
 
 import bodega.*;
 import java.awt.*;

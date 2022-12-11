@@ -1,10 +1,10 @@
 package bodega;
 
-import GUI.*;
+import Buttons.BotonesHistorial;
+import Graphics.PaintToolHistorialPedidos;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
-import botones.*;
 
 
 public class HistorialPedidos extends JPanel {

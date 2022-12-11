@@ -1,9 +1,9 @@
 package bodega;
 
+import Buttons.BotonesVista;
+import Graphics.PaintToolVistaCompra;
 import java.awt.*;
 import javax.swing.*;
-import botones.*;
-import GUI.*;
 
 public class VistaCompra extends JPanel{
     private Ventana window;
@@ -17,7 +17,7 @@ public class VistaCompra extends JPanel{
         this.setBounds(0, 0, anchoVentana, largoVentana);
         
         aerea = new VistaAerea(anchoVentana, largoVentana);
-        carro = new VistaCarro(anchoVentana, largoVentana);
+        carro = new VistaCarro(anchoVentana, largoVentana, aerea);
         BotonesVista botones = new BotonesVista(this);
         paint = new PaintToolVistaCompra(this);
         setViews(aerea);

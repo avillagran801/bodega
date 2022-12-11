@@ -1,4 +1,4 @@
-package GUI;
+package Graphics;
 
 import bodega.VistaAerea;
 import java.awt.Color;
@@ -7,8 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JSpinner;
 import javax.swing.Timer;
-//import java.util.Timer;
-// import java.util.TimerTask;
 
 public class Carrito extends JSpinner{
     
@@ -122,7 +120,7 @@ public class Carrito extends JSpinner{
         pos_y = pos_y + vel_y;
         switch(flag){
             case 0:
-                if((pos_y+alto) > 355){
+                if((pos_y+alto) > 335){
                     flag = 1;
                     vel_y = 3;
                 }
@@ -143,6 +141,9 @@ public class Carrito extends JSpinner{
                 }
                 break;
             case 3:
+                if(vista.getCompra().getListaActual().getNaranja().getCantidad() != 0 && pos_x == 262){  
+                    Pausa(3);
+                }
                 if((pos_x+alto) > 735){
                     flag = 4;
                     vel_x= -2;
@@ -190,18 +191,22 @@ public class Carrito extends JSpinner{
         return giro;
     }
     
-    private void Pausa(int num){
+    private void Pausa(int flag_aux){
         vista.pausa = true;
         ActionListener taskPerformer = new ActionListener() { 
             @Override
             public void actionPerformed(ActionEvent evt) {
                 vista.pausa = false;
-                flag = num;
+                flag = flag_aux;
             }
         };
                     
         Timer timer = new Timer(5000, taskPerformer);
         timer.setRepeats(false);
         timer.start();
+    }
+    
+    public int getFlag(){
+        return flag;
     }
 }

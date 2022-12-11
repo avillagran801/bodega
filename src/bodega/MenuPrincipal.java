@@ -1,8 +1,8 @@
 package bodega;
 
+import Buttons.BotonesMenu;
 import java.awt.*;
 import javax.swing.*;
-import botones.*;
 
 public class MenuPrincipal extends JPanel{
     private Ventana window;

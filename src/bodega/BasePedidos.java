@@ -1,10 +1,10 @@
 package bodega;
 
-import botones.*;
+import Buttons.BotonesPedido;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
-import GUI.PaintToolBasePedidos;
+import Graphics.PaintToolBasePedidos;
 
 public class BasePedidos extends JPanel{
     private int categoria;
