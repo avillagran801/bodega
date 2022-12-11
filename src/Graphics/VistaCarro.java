@@ -69,7 +69,7 @@ public class VistaCarro extends JPanel{
             g.setColor(new Color(235, 212, 137));
             g.fillRect(this.getX(), this.getY()+6, this.getWidth()-6, this.getHeight()-6);
             
-            if (1 <= aerea.carrito.getFlag() && aerea.carrito.getFlag() <= 7){
+            if (1 <= aerea.carrito.getFlag() && aerea.carrito.getFlag() <= 8){
                 // Fondo mesa
                 g.setColor(new Color(102, 78, 21));
                 g.fillRect(this.getX(), this.getY()+40, this.getWidth()-6, 50);
@@ -79,19 +79,19 @@ public class VistaCarro extends JPanel{
                     case 1:
                         g.setColor(Color.red);
                         break;
-                    case 2:
+                    case 3:
                         g.setColor(Color.orange);
                         break;
-                    case 3:
+                    case 4:
                         g.setColor(Color.yellow);
                         break;
-                    case 4:
+                    case 5:
                         g.setColor(new Color(89, 186, 75));
                         break;
-                    case 5:
+                    case 6:
                         g.setColor(new Color(243, 24, 24));
                         break;
-                    case 6:
+                    case 7:
                         g.setColor(new Color(0, 153, 0));
                         break;
                 }
@@ -133,7 +133,7 @@ public class VistaCarro extends JPanel{
 
             }
             
-            if(aerea.carrito.getFlag() == 9){
+            if(aerea.carrito.getFlag() == 10){
                 // Frigorífico
                 g.setColor(new Color(104,213,202));
                 g.fillRect(this.getX(), this.getY()+60, this.getWidth()-6, 40);
