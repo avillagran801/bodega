@@ -5,15 +5,25 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+/**
+ * Botón asociados a la vista de compra
+ */
 public class BotonesVista {
     private VistaCompra vista;
     
+    /**
+     * Constructor de BotonesVista
+     * @param vista_aux Vista en que aparecerá el botón
+     */
     public BotonesVista(VistaCompra vista_aux){
         vista = vista_aux;
         
         botonVolver();
     }
     
+    /**
+     * Crea e inserta el botón para volver al menú principal
+     */
     private void botonVolver(){
         JButton volver = new JButton();
         volver.setBounds(20, 60, 40, 40);

@@ -1,6 +1,5 @@
 package Graphics;
 
-import bodega.VistaAerea;
 import java.awt.Color;
 import java.awt.*;
 import java.awt.event.ActionEvent;

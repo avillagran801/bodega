@@ -5,6 +5,10 @@ import javax.swing.*;
 import bodega.*;
 import java.io.IOException;
 
+/**
+ * 
+ * @author ana
+ */
 public class BotonesMenu {
     public BotonesMenu(MenuPrincipal menu){
         JButton inicio = new JButton("Iniciar Nuevo Pedido");

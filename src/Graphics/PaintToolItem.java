@@ -4,13 +4,26 @@ import java.awt.*;
 import javax.swing.*;
 import bodega.*;
 
+/**
+ * Subclase de JPanel encargada de pintar los ítems
+ */
 public class PaintToolItem extends JPanel{
     private Item item;
     
+    /**
+     * Constructor de PaintToolItem
+     * @param item_aux Item a pintar
+     */
     public PaintToolItem(Item item_aux){
         item = item_aux;
     }
     
+    /**
+     * Método para pintar el ítem
+     * @param g
+     * @param imagenY Posición en el eje Y para la imagen
+     * @param textoY Posición en el eje Y para el texto
+     */
     public void paintComponent(Graphics g, int imagenY, int textoY){
         g.drawImage(item.getImagen(), 200, imagenY, 120, 120, 
                 null);

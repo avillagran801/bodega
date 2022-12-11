@@ -4,33 +4,47 @@ import java.awt.*;
 import javax.swing.*;
 import bodega.*;
 
+/**
+ * Subclase de JPanel encargada de pintar la base de los pedidos
+ */
 public class PaintToolBasePedidos extends JPanel{
+    private BasePedidos base;
     private ListaPedido lista;
     
+    /**
+     * Recibe la base a usar junto a un Graphics
+     * @param base_aux Base a usar
+     * @param g 
+     */
     public void paint(BasePedidos base_aux, Graphics g){
+        base = base_aux;
         lista = base_aux.getListaPedido();
-        this.paintComponent(g, base_aux);
+        this.paintComponent(g);
     }
-    
-    public void paintComponent(Graphics g, BasePedidos base_aux) {
+
+    /**
+     * Pinta la interfaz junto a la información asociada a cada ítem
+     * @param g 
+     */
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
         
         // Color base azul claro
         Color azulClaro = new Color(85, 130, 139);
         g.setColor(azulClaro);
-        g.fillRect(150, 0, 800, base_aux.getHeight());
+        g.fillRect(150, 0, 800, base.getHeight());
         repaint();
         
         // Paneles azul oscuro en los costados
         Color azulOscuro = new Color(54, 73, 88);
         g.setColor(azulOscuro);
-        g.fillRect(0, 0, 150, base_aux.getHeight());
-        g.fillRect(base_aux.getWidth()-250, 0, 250, base_aux.getHeight());
+        g.fillRect(0, 0, 150, base.getHeight());
+        g.fillRect(base.getWidth()-250, 0, 250, base.getHeight());
       
         // Ítems y su cantidad
         Font letraMediana = new Font("SansSerif.", 1, 16);        
         
-        switch(base_aux.getCategoria()){
+        switch(base.getCategoria()){
             case 0:
                 // Rectángulo que destaca categoría
                 g.setColor(azulClaro);
@@ -66,6 +80,10 @@ public class PaintToolBasePedidos extends JPanel{
 
     }
     
+    /**
+     * Pinta un resumen del pedido que se está realizando
+     * @param g 
+     */
     private void resumenPedido(Graphics g){
         int posY = 110;
         int saltoLinea = 30;

@@ -5,15 +5,21 @@ import javax.swing.*;
 import bodega.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
+/**
+ * Subclase de JPanel encargada de pintar el historial
+ */
 public class PaintToolHistorialPedidos extends JPanel{
     private HistorialPedidos historial;
     private BufferedImage imagen;
 
+    /**
+     * Constructor de PaintToolHistorialPedidos
+     * @param hist_aux HistorialPedidos a pintar
+     */
     public PaintToolHistorialPedidos(HistorialPedidos hist_aux){
         historial = hist_aux;
         this.setBackground(new Color(54, 73, 88));
@@ -26,6 +32,12 @@ public class PaintToolHistorialPedidos extends JPanel{
         }
     }
 
+    /**
+     * Método para pintar el historial de pedidos en orden de antigüedad. Se
+     * incluye el detalle de qué ítems se pidieron, en qué cantidad y la fecha
+     * y horas exactas en que se abrieron los pedidos
+     * @param g 
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

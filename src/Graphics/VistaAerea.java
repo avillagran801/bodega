@@ -1,22 +1,22 @@
-package bodega;
+package Graphics;
 
 import java.awt.*;
 import javax.swing.*;
 import Graphics.Carrito;
+import bodega.VistaCompra;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class VistaAerea extends JPanel implements ActionListener{
-    
+public class VistaAerea extends JPanel implements ActionListener{   
     public Timer temporizador;
     public Carrito carrito;
     public Boolean pausa;
-    VistaCompra vista;
+    private VistaCompra vista;
     
-    
-    public VistaAerea(int anchoVentana, int largoVentana){
+    public VistaAerea(int anchoVentana, int largoVentana, VistaCompra compra_aux){
+        vista = compra_aux;
         this.setLayout(null);
         this.setBounds(0, 0, anchoVentana, largoVentana);
         this.setOpaque(false);
@@ -41,7 +41,6 @@ public class VistaAerea extends JPanel implements ActionListener{
             Logger.getLogger(VistaAerea.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
     
     @Override
     public void paintComponent(Graphics g) {

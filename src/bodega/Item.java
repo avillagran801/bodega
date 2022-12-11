@@ -6,12 +6,12 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import Graphics.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Clase que guarda información sobre los ítems disponibles para comprar
- * @author ana
  */
-
 public class Item extends JPanel{
 	private int cantidad;
         private String nombre;
@@ -26,15 +26,17 @@ public class Item extends JPanel{
          * @param descripcion_aux String con descripción del ítem
          * @param unidad_aux String con la unidad de medida del ítem
          * @param ubicacion String con la ubicación de la imagen referencial
-         * @throws IOException Excepción en caso de que no encuentre la imagen
-         * referencial
          */
 	public Item(String nombre_aux, String descripcion_aux, String unidad_aux, String ubicacion)
-                throws IOException{
+                {
             cantidad = 0;
             nombre = nombre_aux;
             descripcion = descripcion_aux;
-            imagen = ImageIO.read(getClass().getResourceAsStream(ubicacion));
+            try {
+                imagen = ImageIO.read(getClass().getResourceAsStream(ubicacion));
+            } catch (IOException ex) {
+                Logger.getLogger(Item.class.getName()).log(Level.SEVERE, null, ex);
+            }
             unidadDeMedida = unidad_aux;
             paint = new PaintToolItem(this);
 	}

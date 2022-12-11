@@ -1,16 +1,22 @@
 package bodega;
 import java.awt.*;
-import java.io.IOException;
 import javax.swing.*;
 
-
+/**
+ * Subclase de JFrame que contiene al menú principal, historial de pedidos, base
+ * para realizar pedidos y animación de las compras en la bodega
+ * @author ana
+ */
 public class Ventana extends JFrame {
     private BasePedidos base;
     private MenuPrincipal menu;
     private VistaCompra vista;
     private HistorialPedidos historial;
 
-    public Ventana() throws IOException {
+    /**
+     * Constructor de Ventana. En él se inicializan los distintos paneles
+     */
+    public Ventana(){
         super();
         this.setLayout(new BorderLayout());
         this.setTitle("Ventana Pedido");
@@ -21,12 +27,10 @@ public class Ventana extends JFrame {
         this.setResizable(false);
         this.setVisible(true);
         
-        menu = new MenuPrincipal(this.getWidth(), this.getHeight());
-        base = new BasePedidos(this.getWidth(), this.getHeight());
-        vista = new VistaCompra(this.getWidth(), this.getHeight());
-        historial = new HistorialPedidos(this.getWidth(), this.getHeight());
-        
-        setWindowInComponents();
+        menu = new MenuPrincipal(this);
+        base = new BasePedidos(this);
+        vista = new VistaCompra(this);
+        historial = new HistorialPedidos(this);
         
         this.getContentPane().add(base);
         this.getContentPane().add(menu);
@@ -45,25 +49,34 @@ public class Ventana extends JFrame {
         repaint();
     }
     
-    private void setWindowInComponents(){
-        menu.setWindow(this);
-        base.setWindow(this);
-        vista.setWindow(this);
-        historial.setWindow(this);
-    }
-    
+    /**
+     * Devuelve el menú principal
+     * @return MenuPrincipal menu
+     */
     public MenuPrincipal getMenu(){
         return menu;
     }
     
+    /**
+     * Devuelve la base de los pedidos
+     * @return BasePedidos base
+     */
     public BasePedidos getBase(){
         return base;
     }
     
+    /**
+     * Devuelve la vista de la compra en la bodega
+     * @return VistaCompra vista
+     */
     public VistaCompra getVista(){
         return vista;
     }
     
+    /**
+     * Devuelve el historial de pedidos
+     * @return HistorialPedidos historial
+     */
     public HistorialPedidos getHistorial(){
         return historial;
     }

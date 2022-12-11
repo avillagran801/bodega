@@ -5,9 +5,16 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+/**
+ * Botones asociados a la base de pedidos
+ */
 public class BotonesPedido{
     private BasePedidos base;
     
+    /**
+     * Método constructor para BotonesPedido
+     * @param b_aux Base en que aparecerán los botones
+     */
     public BotonesPedido(BasePedidos b_aux){
         base = b_aux;
         selectorCategoria();
@@ -15,6 +22,9 @@ public class BotonesPedido{
         cantidadProducto();
     }
 
+    /**
+     * Permite cambiar entre las categorías de fruta, verduras y carnes
+     */
     private void selectorCategoria(){       
         JButton frutas = new JButton("Frutas");
         frutas.setBounds(20, 100, 130, 60);
@@ -69,6 +79,10 @@ public class BotonesPedido{
         base.add(carnes);
     }
     
+    /**
+     * Finaliza el pedido y entrega esta lista al historial y a la vista de
+     * compra
+     */
     private void finPedido(){
         JButton finPedido = new JButton("Finalizar Pedido");
         finPedido.setBounds(980, 680, 190, 40);
@@ -101,6 +115,9 @@ public class BotonesPedido{
         base.add(finPedido);
     }    
    
+    /**
+     * Botones para sumar o restar la cantidad que se quiere comprar de un ítem
+     */
     private void cantidadProducto(){        
         JButton mas0 = new JButton();
         mas0.setBounds(850, 140, 25, 25);
@@ -224,6 +241,10 @@ public class BotonesPedido{
         base.add(menos2);
     }
     
+    /**
+     * Función que interactúa con el ítem para aumentar en 1 su cantidad
+     * @param numBoton Botón presionado
+     */
     private void sumarProducto(int numBoton){
         switch(base.getCategoria()){
             case 0:      
@@ -276,6 +297,10 @@ public class BotonesPedido{
         }     
     }
     
+    /**
+    * Función que interactúa con el ítem para disminuir en 1 su cantidad
+    * @param numBoton Botón presionado
+    */
     private void restarProducto(int numBoton){
         switch(base.getCategoria()){
             case 0:      

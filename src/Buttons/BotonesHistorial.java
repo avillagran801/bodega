@@ -5,15 +5,25 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+/**
+ * Botón asociado al historial de compras
+ */
 public class BotonesHistorial {
     private HistorialPedidos historial;
     
+    /**
+     * Constructor BotonesHistorial
+     * @param historial_aux HistorialPedidos en que se insertan
+     */
     public BotonesHistorial(HistorialPedidos historial_aux){
         historial = historial_aux;
         
         VolverAlMenu();
     }
     
+    /**
+     * Crea e inserta el botón para volver al menú principal
+     */
     private void VolverAlMenu(){
         JButton volver = new JButton();
         volver.setBounds(20, 20, 40, 40);

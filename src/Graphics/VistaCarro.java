@@ -1,5 +1,6 @@
-package bodega;
+package Graphics;
 
+import Graphics.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
