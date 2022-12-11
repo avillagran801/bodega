@@ -2,19 +2,27 @@ package Graphics;
 
 import java.awt.*;
 import javax.swing.*;
-import Graphics.Carrito;
 import bodega.VistaCompra;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * JPanel encargado de dibujar la vista aérea de la bodega
+ */
 public class VistaAerea extends JPanel implements ActionListener{   
     public Timer temporizador;
     public Carrito carrito;
     public Boolean pausa;
     private VistaCompra vista;
     
+    /**
+     * Constructor de la vista aérea
+     * @param anchoVentana Ancho de la ventana en que se genera
+     * @param largoVentana Largo de la ventana en que se genera
+     * @param compra_aux VistaCompra asociada
+     */
     public VistaAerea(int anchoVentana, int largoVentana, VistaCompra compra_aux){
         vista = compra_aux;
         this.setLayout(null);
@@ -26,10 +34,18 @@ public class VistaAerea extends JPanel implements ActionListener{
         pausa = false;
     }
     
+    /**
+     * Devuelve la VistaCompra asociada
+     * @return VistaCompra asociada
+     */
     public VistaCompra getCompra(){
         return vista;
     }
     
+    /**
+     * Método que permite repintar la vista de acuerdo a los cambios de estado
+     * @param e 
+     */
     @Override
     public void actionPerformed(ActionEvent e){
         vista.repaint();
@@ -42,6 +58,10 @@ public class VistaAerea extends JPanel implements ActionListener{
         }
     }
     
+    /**
+     * Método para pintar la vista aérea
+     * @param g 
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -145,6 +165,10 @@ public class VistaAerea extends JPanel implements ActionListener{
         carrito.paint(g);
     }
     
+    /**
+     * Método que actualiza el estado del carrito
+     * @throws InterruptedException 
+     */
     public void update() throws InterruptedException{
         carrito.update();
     }

@@ -7,18 +7,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JSpinner;
 import javax.swing.Timer;
 
-public class Carrito extends JSpinner{
-    
+public class Carrito extends JSpinner{    
     VistaAerea vista;
     private static final int ancho = 80;
     private static final int alto = 100;
-    int pos_x = 100;
-    int pos_y = 130;
-    int vel_x = 0;
-    int vel_y = 5;
-    int giro = 0;
-    int flag = 0;
+    private int pos_x = 100;
+    private int pos_y = 130;
+    private int vel_x = 0;
+    private int vel_y = 5;
+    private int giro = 0;
+    private int flag = 0;
     
+    /**
+     * Constructor del carrito de compras
+     * @param vista_aux VistaAerea asociada al carrito
+     */
     public Carrito(VistaAerea vista_aux){
         vista = vista_aux;
     }
@@ -38,6 +41,10 @@ public class Carrito extends JSpinner{
     11 = Se detiene, dejas las cosas. Fin.
     */
     
+    /**
+     * Método para dibujar la bodega y el carrito
+     * @param g_aux 
+     */
     @Override
     public void paint(Graphics g_aux){
         Graphics2D g2d = (Graphics2D)g_aux.create();
@@ -113,7 +120,11 @@ public class Carrito extends JSpinner{
                 break;
         }
     }
-    
+    /**
+     * Actualiza los estados del carrito en función de su posición y los ítems
+     * del pedido actual
+     * @throws InterruptedException 
+     */
     public void update() throws InterruptedException{
         pos_x = pos_x + vel_x;
         pos_y = pos_y + vel_y;
@@ -177,6 +188,9 @@ public class Carrito extends JSpinner{
         }
     }
     
+    /**
+     * Reinicia los parámetros asociados al carrito
+     */
     public void reset(){
         pos_x = 100;
         pos_y = 130;
@@ -186,10 +200,17 @@ public class Carrito extends JSpinner{
         flag = 0;
     }
     
+    /*
+    Por lo visto no se usa
     public float getGiro(){
         return giro;
     }
+    */
     
+    /**
+     * Permite detener el movimiento del carrito por 5000 milisegundos
+     * @param flag_aux 
+     */
     private void Pausa(int flag_aux){
         vista.pausa = true;
         ActionListener taskPerformer = new ActionListener() { 
@@ -205,6 +226,10 @@ public class Carrito extends JSpinner{
         timer.start();
     }
     
+    /**
+     * Devuelve la flag del estado del carrito
+     * @return Flag del estado del carrito
+     */
     public int getFlag(){
         return flag;
     }

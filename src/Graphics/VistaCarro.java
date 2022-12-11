@@ -9,10 +9,19 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+/**
+ * JPanel encargado de dibujar el punto de vista del carro
+ */
 public class VistaCarro extends JPanel{
     private VistaAerea aerea;
     private BufferedImage estatica;
     
+    /**
+     * Constructor de VistaCarro
+     * @param anchoVentana Ancho de la ventana en que se genera
+     * @param largoVentana Largo de la ventana en que se genera
+     * @param aerea_aux VistaAerea asociada
+     */
     public VistaCarro(int anchoVentana, int largoVentana, VistaAerea aerea_aux){
         this.setLayout(null);
         int edge = 30;
@@ -28,6 +37,12 @@ public class VistaCarro extends JPanel{
         }
     }
     
+    /**
+     * Método para pintar la vista del carro. Cuando el carro está en movimiento
+     * aparece una imagen de estática, mientras que cuando se detiene el carro
+     * aparece el estante que está frente suyo
+     * @param g 
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
