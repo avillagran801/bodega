@@ -3,11 +3,6 @@ package Graphics;
 import java.awt.*;
 import javax.swing.*;
 import bodega.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 
 /**
  * Subclase de JPanel encargada de pintar la lista de pedido en la vista de
@@ -15,19 +10,13 @@ import javax.imageio.ImageIO;
  */
 public class PaintToolVistaCompra extends JPanel{
     private VistaCompra vista;
-    private BufferedImage imagen;
-    
+  
     /**
      * Constructor de PaintToolVistaCompra
      * @param vista_aux Vista asociada
      */
     public PaintToolVistaCompra(VistaCompra vista_aux){
         vista = vista_aux;
-        try {
-            imagen = ImageIO.read(getClass().getResourceAsStream("/res/checkWhite.png"));
-        } catch (IOException ex) {
-            Logger.getLogger(PaintToolVistaCompra.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
     
     /**
