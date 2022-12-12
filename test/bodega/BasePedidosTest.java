@@ -41,8 +41,6 @@ public class BasePedidosTest {
         int sel = 0;
         BasePedidos instance = vent.getBase();
         instance.setCategoria(sel);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Fallo al asignar categoría");
     }
 
     /**
@@ -54,9 +52,7 @@ public class BasePedidosTest {
         BasePedidos instance = vent.getBase();
         int expResult = 0;
         int result = instance.getCategoria();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Fallo al obtener categoría.");
+        assertSame(expResult, result);
     }
 
     /**
@@ -67,8 +63,6 @@ public class BasePedidosTest {
         System.out.println("nuevaListaPedido");
         BasePedidos instance = vent.getBase();
         instance.nuevaListaPedido();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Fallo al crear nueva lista de pedido");
     }
     
 }

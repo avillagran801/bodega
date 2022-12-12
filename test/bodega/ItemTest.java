@@ -52,9 +52,7 @@ public class ItemTest {
         instance.sumarCantidad();
         int expResult = 3;
         int result = instance.getCantidad();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Error al sumar la cantidad");
+        assertSame(expResult, result);
     }
 
     /**
@@ -69,9 +67,7 @@ public class ItemTest {
         instance.restarCantidad();
         int expResult = 0;
         int result = instance.getCantidad();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Error al restar la cantidad");
+        assertSame(expResult, result);
     }
 
     /**
@@ -83,9 +79,7 @@ public class ItemTest {
         Item instance = manzana;
         int expResult = 0;
         int result = instance.getCantidad();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Error al obtener la cantidad");
+        assertSame(expResult, result);
     }
 
     /**
@@ -97,9 +91,7 @@ public class ItemTest {
         Item instance = manzana;
         String expResult = "Manzana";
         String result = instance.getNombre();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Error al obtener el nombre");
+        assertSame(expResult, result);
     }
 
     /**
@@ -111,9 +103,7 @@ public class ItemTest {
         Item instance = manzana;
         String expResult = "(1 kilo)";
         String result = instance.getDescripcion();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("Error al obtener la descripción");
+        assertSame(expResult, result);
     }
     
 }
