@@ -48,18 +48,40 @@ public class Carrito extends JSpinner{
      * Método para dibujar la bodega y el carrito
      * @param g_aux 
      */
-    @Override
+ @Override
     public void paint(Graphics g_aux){
         Graphics2D g2d = (Graphics2D)g_aux.create();
         switch(flag){
             // Carrito vertical.
-            case 0, 1, 10, 11:
+            case 0:
                 g2d.translate(pos_x, pos_y);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, ancho, alto);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, ancho, (alto/10));
                 break;
+            case 1:
+                g2d.translate(pos_x, pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                break;
+            case 10:
+                g2d.translate(pos_x, pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                break;                
+            case 11:
+                g2d.translate(pos_x, pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, ancho, alto);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, ancho, (alto/10));
+                break;                
+                
             // Carrito girando a la derecha para quedar horizontal.
             case 2:
                 g2d.translate(pos_x, pos_y);
@@ -71,13 +93,49 @@ public class Carrito extends JSpinner{
                 giro-=3;
                 break;
             // Carrito en horizontal hacia la derecha.
-            case 3, 4, 5, 6, 7, 8:
+            case 3:
                 g2d.translate(pos_x, pos_y-ancho);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
                 break;
+                
+            case 4:
+                g2d.translate(pos_x, pos_y-ancho);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, (alto/10), ancho);
+                break;                
+            case 5:
+                g2d.translate(pos_x, pos_y-ancho);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, (alto/10), ancho);
+                break;                
+            case 6:
+                g2d.translate(pos_x, pos_y-ancho);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, (alto/10), ancho);
+                break;                
+            case 7:
+                g2d.translate(pos_x, pos_y-ancho);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, (alto/10), ancho);
+                break;                
+            case 8:
+                g2d.translate(pos_x, pos_y-ancho);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(0, 0, (alto/10), ancho);
+                break;                
             // Carrito girando a la izquierda para quedar vertical.
             case 9:
                 g2d.translate(pos_x, pos_y);
@@ -99,13 +157,20 @@ public class Carrito extends JSpinner{
                 giro+=3;
                 break;
             // Carrito horizontal a la izquierda.
-            case 13, 14:
+            case 13:
                 g2d.translate((pos_x-alto), pos_y);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(((alto*9)/10), 0, (alto/10), ancho);
                 break;
+            case 14:
+                g2d.translate((pos_x-alto), pos_y);
+                g2d.setColor(Color.LIGHT_GRAY);
+                g2d.fillRect(0, 0, alto, ancho);
+                g2d.setColor(Color.RED);
+                g2d.fillRect(((alto*9)/10), 0, (alto/10), ancho);
+                break;            
         }
     }
     /**
