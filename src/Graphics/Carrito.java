@@ -17,6 +17,13 @@ public class Carrito extends JSpinner{
     private int vel_y = 5;
     private int giro = 0;
     private int flag = 0;
+    private Boolean manzana = false;
+    private Boolean naranja = false;
+    private Boolean platano = false;
+    private Boolean lechuga = false;
+    private Boolean tomate = false;
+    private Boolean pepino = false;
+    private Boolean carne = false;
     
     /**
      * Constructor del carrito de compras
@@ -59,6 +66,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, ancho, alto);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, ancho, (alto/10));
+                if(manzana){
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval(0, (alto/10), 20, 20);
+                }
+                if(naranja){
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval(0, (alto/10)+30, 20, 20);
+                }
+                if(platano){
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval(0, (alto/10)+60, 20, 20);
+                }
+                if(lechuga){
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval(30, (alto/10), 20, 20);
+                }
+                if(tomate){
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval(30, (alto/10)+30, 20, 20);
+                }
+                if(pepino){
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval(30, (alto/10)+60, 20, 20);
+                }
+                if(carne){
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval(60, (alto/10), 20, 20);
+                }
                 break;
             // Carrito girando a la derecha para quedar horizontal.
             case 2:
@@ -68,6 +103,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, ancho, alto);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, ancho, (alto/10));
+                if(manzana){
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval(0, (alto/10), 20, 20);
+                }
+                if(naranja){
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval(0, (alto/10)+30, 20, 20);
+                }
+                if(platano){
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval(0, (alto/10)+60, 20, 20);
+                }
+                if(lechuga){
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval(30, (alto/10), 20, 20);
+                }
+                if(tomate){
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval(30, (alto/10)+30, 20, 20);
+                }
+                if(pepino){
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval(30, (alto/10)+60, 20, 20);
+                }
+                if(carne){
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval(60, (alto/10), 20, 20);
+                }
                 giro-=3;
                 break;
             // Carrito en horizontal hacia la derecha.
@@ -77,6 +140,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
+                if(manzana){
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval((alto/10), ancho-20, 20, 20);
+                }
+                if(naranja){
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto/10)+30, ancho-20, 20, 20);
+                }
+                if(platano){
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto/10)+60, ancho-20, 20, 20);
+                }
+                if(lechuga){
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval((alto/10), ancho-50, 20, 20);
+                }
+                if(tomate){
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval((alto/10)+30, ancho-50, 20, 20);
+                }
+                if(pepino){
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval((alto/10)+60, ancho-50, 20, 20);
+                }
+                if(carne){
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval((alto/10), ancho-80, 20, 20);
+                }
                 break;
             // Carrito girando a la izquierda para quedar vertical.
             case 9:
@@ -86,6 +177,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, ancho, alto);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, ancho, (alto/10));
+                if(manzana){
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval(0, (alto/10), 20, 20);
+                }
+                if(naranja){
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval(0, (alto/10)+30, 20, 20);
+                }
+                if(platano){
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval(0, (alto/10)+60, 20, 20);
+                }
+                if(lechuga){
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval(30, (alto/10), 20, 20);
+                }
+                if(tomate){
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval(30, (alto/10)+30, 20, 20);
+                }
+                if(pepino){
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval(30, (alto/10)+60, 20, 20);
+                }
+                if(carne){
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval(60, (alto/10), 20, 20);
+                }
                 giro+=3;
                 break;
             // Carrito girando a la izquierda para quedar horizontal.
@@ -96,6 +215,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, ancho, alto);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, ancho, (alto/10));
+                if(manzana){
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval(0, (alto/10), 20, 20);
+                }
+                if(naranja){
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval(0, (alto/10)+30, 20, 20);
+                }
+                if(platano){
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval(0, (alto/10)+60, 20, 20);
+                }
+                if(lechuga){
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval(30, (alto/10), 20, 20);
+                }
+                if(tomate){
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval(30, (alto/10)+30, 20, 20);
+                }
+                if(pepino){
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval(30, (alto/10)+60, 20, 20);
+                }
+                if(carne){
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval(60, (alto/10), 20, 20);
+                }
                 giro+=3;
                 break;
             // Carrito horizontal a la izquierda.
@@ -105,6 +252,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(((alto*9)/10), 0, (alto/10), ancho);
+                if(manzana){
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval(((alto*9)/10-20), 0, 20, 20);
+                }
+                if(naranja){
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto*9)/10-50, 0, 20, 20);
+                }
+                if(platano){
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto*9)/10-80, 0, 20, 20);
+                }
+                if(lechuga){
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval(((alto*9)/10-20), 30, 20, 20);
+                }
+                if(tomate){
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval(((alto*9)/10-50), 30, 20, 20);
+                }
+                if(pepino){
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval(((alto*9)/10-80), 30, 20, 20);
+                }
+                if(carne){
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval(((alto*9)/10-20), 60, 20, 20);
+                }
                 break;
         }
     }
@@ -126,6 +301,7 @@ public class Carrito extends JSpinner{
             case 1:
                 if(vista.getCompra().getListaActual().getManzana().getCantidad() != 0){
                     Pausa(2);
+                    manzana = true;
                 }
                 else {
                     flag = 2;
@@ -142,6 +318,7 @@ public class Carrito extends JSpinner{
                 if(vista.getCompra().getListaActual().getNaranja().getCantidad() != 0
                         && pos_x > 260){  
                     Pausa(4);
+                    naranja = true;
                 } else {
                     if(pos_x > 260){
                         flag = 4;
@@ -152,6 +329,7 @@ public class Carrito extends JSpinner{
                 if(vista.getCompra().getListaActual().getPlatano().getCantidad() != 0
                         && pos_x > 385){  
                     Pausa(5);
+                    platano = true;
                 } else {
                     if(pos_x > 385){
                         flag = 5;
@@ -162,6 +340,7 @@ public class Carrito extends JSpinner{
                 if(vista.getCompra().getListaActual().getLechuga().getCantidad() != 0
                         && pos_x > 385){  
                     Pausa(6);
+                    lechuga = true;
                 } else {
                     if(pos_x > 385){
                         flag = 6;
@@ -172,6 +351,7 @@ public class Carrito extends JSpinner{
                 if(vista.getCompra().getListaActual().getTomate().getCantidad() != 0
                         && pos_x > 530){  
                     Pausa(7);
+                    tomate = true;
                 } else {
                     if(pos_x > 530){
                         flag = 7;
@@ -182,6 +362,7 @@ public class Carrito extends JSpinner{
                 if(vista.getCompra().getListaActual().getPepino().getCantidad() != 0
                         && pos_x > 625){  
                     Pausa(8);
+                    pepino = true;
                 } else {
                     if(pos_x > 625){
                         flag = 8;
@@ -206,6 +387,7 @@ public class Carrito extends JSpinner{
                         || vista.getCompra().getListaActual().getPollo().getCantidad() != 0
                         || vista.getCompra().getListaActual().getChurrasco().getCantidad() != 0)
                         && pos_y > 450){  
+                    carne = true;
                     Pausa(11);
                 } else {
                     if(pos_y > 450){
@@ -245,6 +427,13 @@ public class Carrito extends JSpinner{
         vel_y = 5;
         giro = 0;
         flag = 0;
+        manzana = false;
+        naranja = false;
+        platano = false;
+        lechuga = false;
+        tomate = false;
+        pepino = false;
+        carne = false;
     }
     
     /**
