@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 /**
- * JPanel encargado de dibujar el punto de vista del carro
+ * Subclase de JPanel encargada de dibujar el punto de vista del carro
  */
 public class VistaCarro extends JPanel{
     private VistaAerea aerea;

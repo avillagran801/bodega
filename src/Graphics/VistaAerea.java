@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * JPanel encargado de dibujar la vista aérea de la bodega
+ * Subclase de JPanel encargada de dibujar la vista aérea de la bodega
  */
 public class VistaAerea extends JPanel implements ActionListener{   
     public Timer temporizador;

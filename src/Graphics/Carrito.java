@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JSpinner;
 import javax.swing.Timer;
 
+/**
+ * Subclase de JPanel encargada de pintar y animar al carrito de compras
+ */
 public class Carrito extends JSpinner{    
     VistaAerea vista;
     private static final int ancho = 80;
