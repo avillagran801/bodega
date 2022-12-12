@@ -201,20 +201,104 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
+                if (manzana) {
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval((alto / 10), ancho - 20, 20, 20);
+                }
+                if (naranja) {
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto / 10) + 30, ancho - 20, 20, 20);
+                }
+                if (platano) {
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto / 10) + 60, ancho - 20, 20, 20);
+                }
+                if (lechuga) {
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval((alto / 10), ancho - 50, 20, 20);
+                }
+                if (tomate) {
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval((alto / 10) + 30, ancho - 50, 20, 20);
+                }
+                if (pepino) {
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval((alto / 10) + 60, ancho - 50, 20, 20);
+                }
+                if (carne) {
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval((alto / 10), ancho - 80, 20, 20);
+                }
                 break;                
             case 5:
                 g2d.translate(pos_x, pos_y-ancho);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
-                g2d.fillRect(0, 0, (alto/10), ancho);
-                break;                
+                g2d.fillRect(0, 0, (alto/10), ancho); 
+                if (manzana) {
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval((alto / 10), ancho - 20, 20, 20);
+                }
+                if (naranja) {
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto / 10) + 30, ancho - 20, 20, 20);
+                }
+                if (platano) {
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto / 10) + 60, ancho - 20, 20, 20);
+                }
+                if (lechuga) {
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval((alto / 10), ancho - 50, 20, 20);
+                }
+                if (tomate) {
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval((alto / 10) + 30, ancho - 50, 20, 20);
+                }
+                if (pepino) {
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval((alto / 10) + 60, ancho - 50, 20, 20);
+                }
+                if (carne) {
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval((alto / 10), ancho - 80, 20, 20);
+                }
+                break;
             case 6:
                 g2d.translate(pos_x, pos_y-ancho);
                 g2d.setColor(Color.LIGHT_GRAY);
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
+                if (manzana) {
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval((alto / 10), ancho - 20, 20, 20);
+                }
+                if (naranja) {
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto / 10) + 30, ancho - 20, 20, 20);
+                }
+                if (platano) {
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto / 10) + 60, ancho - 20, 20, 20);
+                }
+                if (lechuga) {
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval((alto / 10), ancho - 50, 20, 20);
+                }
+                if (tomate) {
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval((alto / 10) + 30, ancho - 50, 20, 20);
+                }
+                if (pepino) {
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval((alto / 10) + 60, ancho - 50, 20, 20);
+                }
+                if (carne) {
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval((alto / 10), ancho - 80, 20, 20);
+                }
                 break;                
             case 7:
                 g2d.translate(pos_x, pos_y-ancho);
@@ -222,6 +306,34 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
+                if (manzana) {
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval((alto / 10), ancho - 20, 20, 20);
+                }
+                if (naranja) {
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto / 10) + 30, ancho - 20, 20, 20);
+                }
+                if (platano) {
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto / 10) + 60, ancho - 20, 20, 20);
+                }
+                if (lechuga) {
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval((alto / 10), ancho - 50, 20, 20);
+                }
+                if (tomate) {
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval((alto / 10) + 30, ancho - 50, 20, 20);
+                }
+                if (pepino) {
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval((alto / 10) + 60, ancho - 50, 20, 20);
+                }
+                if (carne) {
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval((alto / 10), ancho - 80, 20, 20);
+                }
                 break;                
             case 8:
                 g2d.translate(pos_x, pos_y-ancho);
@@ -229,7 +341,35 @@ public class Carrito extends JSpinner{
                 g2d.fillRect(0, 0, alto, ancho);
                 g2d.setColor(Color.RED);
                 g2d.fillRect(0, 0, (alto/10), ancho);
-                break;                
+                if (manzana) {
+                    g2d.setColor(Color.RED);
+                    g2d.fillOval((alto / 10), ancho - 20, 20, 20);
+                }
+                if (naranja) {
+                    g2d.setColor(Color.ORANGE);
+                    g2d.fillOval((alto / 10) + 30, ancho - 20, 20, 20);
+                }
+                if (platano) {
+                    g2d.setColor(Color.YELLOW);
+                    g2d.fillOval((alto / 10) + 60, ancho - 20, 20, 20);
+                }
+                if (lechuga) {
+                    g2d.setColor(new Color(89, 186, 75));
+                    g2d.fillOval((alto / 10), ancho - 50, 20, 20);
+                }
+                if (tomate) {
+                    g2d.setColor(new Color(243, 24, 24));
+                    g2d.fillOval((alto / 10) + 30, ancho - 50, 20, 20);
+                }
+                if (pepino) {
+                    g2d.setColor(new Color(0, 153, 0));
+                    g2d.fillOval((alto / 10) + 60, ancho - 50, 20, 20);
+                }
+                if (carne) {
+                    g2d.setColor(new Color(226, 193, 232));
+                    g2d.fillOval((alto / 10), ancho - 80, 20, 20);
+                }
+                break;
             // Carrito girando a la izquierda para quedar vertical.
             case 9:
                 g2d.translate(pos_x, pos_y);
