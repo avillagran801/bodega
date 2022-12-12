@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * JPanel encargado de dibujar la vista aérea de la bodega
+ * Subclase de JPanel encargada de dibujar la vista aérea de la bodega
  */
 public class VistaAerea extends JPanel implements ActionListener{   
     public Timer temporizador;
@@ -160,7 +160,16 @@ public class VistaAerea extends JPanel implements ActionListener{
         //Cajero
         g.setColor(new Color(208,60,85));
         g.fillRect(300, 650, 300, 100);
-        
+        if(14 == carrito.getFlag()){
+            g.setColor(Color.white);
+            g.fillRect(350, 690, 50, 45);
+            g.fillRect(350, 670, 10, 20);
+            g.fillRect(390, 670, 10, 20);
+            g.setColor(Color.black);
+            g.setFont(new Font("SansSerif.", 1, 10));
+            g.drawString("Bodega", 353, 710);
+        }
+
         //Carrito
         carrito.paint(g);
     }
