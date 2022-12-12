@@ -1,4 +1,4 @@
-# Proyecto Semestral
+# Proyecto Semestral. Grupo 18.
 
 • En panel central se muestra una de dos vistas posibles: en una se debe 
 mostrar toda la bodega en vista aérea, en la otra, en vista lateral se 
